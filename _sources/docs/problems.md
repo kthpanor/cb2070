@@ -30,7 +30,7 @@ Let $\mathbf{A}$ and $\mathbf{B}$ be operator matrices in charge conjugation and
 ---------------------------------------------------------------------------
 
 **2**.
-Generators for rotations of electronic wave functions are the angular momentum operators. A finite rotation an angle $\phi$ about axis $\mathbf{n}$ is achieved by the \textit{total} angular momentum operator
+Generators for rotations of electronic wave functions are the angular momentum operators. A finite rotation an angle $\phi$ about axis $\mathbf{n}$ is achieved by the *total* angular momentum operator
 %
 $$
 \hat{R}(\phi, \mathbf{n} ) = 
