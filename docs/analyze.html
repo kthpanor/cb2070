@@ -159,6 +159,11 @@
   </i>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="problems.html">
+   Problems
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="appendix.html">
    Appendices
   </a>
@@ -324,8 +329,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="3dmolviewer_1622798130212842"  style="position: relative; width: 200px; height: 200px">
-        <p id="3dmolwarning_1622798130212842" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+<div class="output text_html"><div id="3dmolviewer_1622805038329845"  style="position: relative; width: 200px; height: 200px">
+        <p id="3dmolwarning_1622805038329845" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
         </div>
 <script>
@@ -348,16 +353,16 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://3dmol.csb.pitt.edu/build/3Dmol.js');
 }
 
-var viewer_1622798130212842 = null;
-var warn = document.getElementById("3dmolwarning_1622798130212842");
+var viewer_1622805038329845 = null;
+var warn = document.getElementById("3dmolwarning_1622805038329845");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_1622798130212842 = $3Dmol.createViewer($("#3dmolviewer_1622798130212842"),{backgroundColor:"white"});
-	viewer_1622798130212842.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
-	viewer_1622798130212842.setStyle({"stick": {}});
-viewer_1622798130212842.render();
+viewer_1622805038329845 = $3Dmol.createViewer($("#3dmolviewer_1622805038329845"),{backgroundColor:"white"});
+	viewer_1622805038329845.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
+	viewer_1622805038329845.setStyle({"stick": {}});
+viewer_1622805038329845.render();
 });
 </script></div></div>
 </div>
