@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group theory and spatial symmetries of wave functions &#8212; Molecular Quantum Mechanics (CB2070)</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Two-particle densities and electron correlation" href="exercise-correlation.html" />
+    <link rel="prev" title="Dissociation of covalent bonds" href="exercise-dissociate.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Molecular Quantum Mechanics (CB2070)</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="units.html">
+   Atomic units
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="software.html">
+   Quantum chemistry software
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="installation.html">
+     Software installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scf-optimization.html">
+     Performing an SCF optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="analyze.html">
+     Analyzing and visualizing
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="exercises.html">
+   Computer exercises
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-orbitals.html">
+     Orbitals and one-particle densities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fock.html">
+     Fock matrices and SCF procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-dissociate.html">
+     Dissociation of covalent bonds
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Group theory and spatial symmetries of wave functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-correlation.html">
+     Two-particle densities and electron correlation
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix.html">
+   Appendices
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/exercise-group-theory.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/exercise-group-theory.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#molecular-system">
+   Molecular system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordering-of-atomic-orbitals">
+   Ordering of atomic orbitals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orbital-notation">
+   Orbital notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electric-dipole-moment-operator">
+   Electric dipole moment operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="group-theory-and-spatial-symmetries-of-wave-functions">
+<span id="exercise-4"></span><h1>Group theory and spatial symmetries of wave functions<a class="headerlink" href="#group-theory-and-spatial-symmetries-of-wave-functions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="molecular-system">
+<h2>Molecular system<a class="headerlink" href="#molecular-system" title="Permalink to this headline">¶</a></h2>
+<p>In this exercise, we will study the ethylene molecule and reveal the spatial symmetries of ground- and excited-state wave functions as well as the molecular orbitals (MOs). The exercise is based on the results derived in the associated problem in the problem set. We will adopt a minimal basis set, STO-3G, and the following molecular structure corresponding to the equilibrium geometry in the electronic ground state:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mol_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">H        1.21655197    0.92414474    0.00000000</span>
+<span class="s2">H        1.21655197   -0.92414474    0.00000000</span>
+<span class="s2">H       -1.21655197   -0.92414474    0.00000000</span>
+<span class="s2">H       -1.21655197    0.92414474    0.00000000</span>
+<span class="s2">C        0.67759997    0.00000000    0.00000000</span>
+<span class="s2">C       -0.67759997    0.00000000    0.00000000</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">Molecule</span><span class="o">.</span><span class="n">read_str</span><span class="p">(</span><span class="n">mol_str</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;angstrom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ordering-of-atomic-orbitals">
+<h2>Ordering of atomic orbitals<a class="headerlink" href="#ordering-of-atomic-orbitals" title="Permalink to this headline">¶</a></h2>
+<p>The program internal ordering of atomic orbitals (AOs) is determined by</p>
+<ol class="simple">
+<li><p>Orbital angular momentum, <span class="math notranslate nohighlight">\(l\)</span></p></li>
+<li><p>Projection of orbital angular momentum, <span class="math notranslate nohighlight">\(m_l\)</span></p></li>
+<li><p>The order of atoms in the user input</p></li>
+</ol>
+</div>
+<div class="section" id="orbital-notation">
+<h2>Orbital notation<a class="headerlink" href="#orbital-notation" title="Permalink to this headline">¶</a></h2>
+<p>It can be convenient to introduce the following notation</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    | \boldsymbol{\chi} \rangle = 
+    \Big(
+    | \chi_1 \rangle, \ldots, | \chi_n \rangle
+    \Big); \quad
+    | \boldsymbol{\phi} \rangle = 
+    \Big(
+    | \phi_1 \rangle, \ldots, | \phi_n \rangle
+    \Big)
+\end{equation*}\]</div>
+<p>i.e., we collect the AO basis functions, <span class="math notranslate nohighlight">\(\{\chi_\alpha(\mathbf{r})\}\)</span>, and (spatial) MOs, <span class="math notranslate nohighlight">\(\{\phi_i(\mathbf{r})\}\)</span>, in their ket-form into \textit{row} vectors. The associated bra-forms are then identified as <em>column</em> vectors that can be compactly written</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \langle \boldsymbol{\chi} | = | \boldsymbol{\chi} \rangle^\dagger; \quad
+     \langle \boldsymbol{\phi} | = | \boldsymbol{\phi} \rangle^\dagger
+\end{equation*}\]</div>
+<p>The set of MOs relate to the set of AOs by means of the matrix of MO coefficients</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+     | \boldsymbol{\phi} \rangle =  
+     | \boldsymbol{\chi} \rangle \mathbf{C}
+\end{equation*}\]</div>
+<p>and the overlap and Fock matrices in AO basis become</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+     \mathbf{S} = \langle \boldsymbol{\chi} | \boldsymbol{\chi} \rangle; \quad
+     \mathbf{F} = \langle \boldsymbol{\chi} | \hat{f} | \boldsymbol{\chi} \rangle
+\end{equation*}\]</div>
+</div>
+<div class="section" id="electric-dipole-moment-operator">
+<h2>Electric dipole moment operator<a class="headerlink" href="#electric-dipole-moment-operator" title="Permalink to this headline">¶</a></h2>
+<p>The electric dipole moment operator takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\boldsymbol{\mu}} = \sum_{i=1}^N \hat{\boldsymbol{\mu}}(i)
+\]</div>
+<p>The AO representation of this one-electron operator, or its three Cartesian components to be specific, is accessible as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dipole_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">ElectricDipoleIntegralsDriver</span><span class="p">()</span>
+
+<span class="n">dipole_mats</span> <span class="o">=</span> <span class="n">dipole_drv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
+
+<span class="n">mu_x</span> <span class="o">=</span> <span class="n">dipole_mats</span><span class="o">.</span><span class="n">x_to_numpy</span><span class="p">()</span>
+<span class="n">mu_y</span> <span class="o">=</span> <span class="n">dipole_mats</span><span class="o">.</span><span class="n">y_to_numpy</span><span class="p">()</span>
+<span class="n">mu_z</span> <span class="o">=</span> <span class="n">dipole_mats</span><span class="o">.</span><span class="n">z_to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this exercise, we will need to print out and examine matrices. It is recommended to format the printout of NumPy arrays by the following settings</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">132</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Perform an SCF optimization to obtain <span class="math notranslate nohighlight">\(|\Psi_\mathrm{HF}\rangle\)</span>. Print out the MO coefficients and orbital energies. Identify the occupied and unoccupied orbitals.</p></li>
+<li><p>Inspect the MO coefficients and determine which irreducible representations the MOs span. To your help, you have the character table.</p></li>
+<li><p>With help of results obtained in the associated problem in the problem set, perform a unitary change of basis produce symmetry-adapted atomic orbitals (SAOs) according to <span class="math notranslate nohighlight">\(| \boldsymbol{\chi}' \rangle = | \boldsymbol{\chi} \rangle  \, \mathbf{U}\)</span>. This transformation should accomplish an ordering of the SAOs according to their symmetry and adhering to the order of irreps in the character table.</p></li>
+<li><p>Determine the overlap matrix in the new basis, i.e., <span class="math notranslate nohighlight">\(\mathbf{S}' = \langle \boldsymbol{\chi}' | \boldsymbol{\chi}' \rangle\)</span>. Comment on the matrix structure.</p></li>
+<li><p>Determine the molecular orbital coefficients in the new basis, i.e., <span class="math notranslate nohighlight">\(\mathbf{C}'\)</span>. Comment on the matrix structure.</p></li>
+<li><p>Determine the dipole moment of your system <span class="math notranslate nohighlight">\(\boldsymbol{\mu} = \langle \Psi | \hat{\boldsymbol{\mu}} | \Psi \rangle\)</span> by determining the MO representation of the operator and using the established formula for expectation values of one-electron operators in the Hartree–Fock approximation. Comment on your result from the perspective of molecular symmetry.</p></li>
+<li><p>Determine the AO representation of the operator (all three Cartesian components) in the new basis. Comment on the matrix structures.</p></li>
+<li><p>Intensities in UV/vis absorption spectra are proportional to the absolute square of the transition moment, i.e., <span class="math notranslate nohighlight">\(I \propto \left| \rule{0pt}{10pt}
+\langle S_n | \hat{\boldsymbol{\mu}} | \Psi_\mathrm{HF}\rangle
+\right|^2\)</span>. For ethylene, the dominant electronic transition in the spectrum is that associated with the excitation from the highest-occupied to the lowest-unoccupied molecular orbital forming excited state <span class="math notranslate nohighlight">\(|S_1\rangle\)</span> of singlet spin symmetry. Which of the three Cartesian components of the transition dipole moment contribute to the intensity? Explain your result from the perspective of symmetry?</p></li>
+<li><p>Determine the intensity for this transition using the result from the associated problem in the problem set and the MO representation of the electric dipole moment operator.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="exercise-dissociate.html" title="previous page">Dissociation of covalent bonds</a>
+    <a class='right-next' id="next-link" href="exercise-correlation.html" title="next page">Two-particle densities and electron correlation</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Patrick Norman<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
