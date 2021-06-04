@@ -1,5 +1,5 @@
-Appendices
-==========
+Appendix
+========
 
 Point group flowchart
 ---------------------
