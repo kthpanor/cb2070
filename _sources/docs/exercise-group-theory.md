@@ -41,7 +41,7 @@ It can be convenient to introduce the following notation
     \Big)
 \end{equation*}
 %
-i.e., we collect the AO basis functions, $\{\chi_\alpha(\mathbf{r})\}$, and (spatial) MOs, $\{\phi_i(\mathbf{r})\}$, in their ket-form into \textit{row} vectors. The associated bra-forms are then identified as *column* vectors that can be compactly written
+i.e., we collect the AO basis functions, $\{\chi_\alpha(\mathbf{r})\}$, and (spatial) MOs, $\{\phi_i(\mathbf{r})\}$, in their ket-form into *row* vectors. The associated bra-forms are then identified as *column* vectors that can be compactly written
 %
 \begin{equation*}
     \langle \boldsymbol{\chi} | = | \boldsymbol{\chi} \rangle^\dagger; \quad

@@ -353,7 +353,7 @@ $$
 ---------------------------------------------------------------------------
 
 **2**.
-Show that \textit{ionization potentials} and \textit{electron affinities} are given by minus the orbital energies, i.e.,
+Show that *ionization potentials* and *electron affinities* are given by minus the orbital energies, i.e.,
 %
 \begin{align*}
     \mathrm{IP} = E^{N-1}_i - E_\mathrm{HF}^N &= -\varepsilon_i \\
@@ -462,7 +462,7 @@ where
     \end{pmatrix}
 \end{equation*}
 %
-In concern with the angular momenta of this state, we can henceforth disregard the radial parts of the orbitals and only consider the spherical harmonics, $Y_{lm}$, and the spin components. The operator of \textit{total} angular momentum in $N$-particle space is
+In concern with the angular momenta of this state, we can henceforth disregard the radial parts of the orbitals and only consider the spherical harmonics, $Y_{lm}$, and the spin components. The operator of *total* angular momentum in $N$-particle space is
 %
 \begin{equation*}
     \hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}
@@ -480,7 +480,7 @@ It is also convenient to introduce ladder operators that take the form
     \hat{J}_\pm =  \hat{J}_x \pm i \hat{J}_y
 \end{equation*}
 
-(a) Show that $\Psi$ is \textit{anti-symmetric} and \textit{symmetric} with respect to particle interchange in orbital and spin spaces, respectively.
+(a) Show that $\Psi$ is *anti-symmetric* and *symmetric* with respect to particle interchange in orbital and spin spaces, respectively.
 
 (b) Show that
 $$\hat{J}^2 = \hat{J}^2_z + \hbar \hat{J}_z + \hat{J}_- \hat{J}_+$$
@@ -493,7 +493,7 @@ $$\hat{J}^2 |\Psi\rangle = J(J+1) \hbar^2 | \Psi \rangle$$
 %
 Determine $J$ as well as the corresponding values for $L$ and $S$.
 
-(e) Write down the \textit{term symbol} for this given state. The term symbol notation in atomic physics is defined by
+(e) Write down the *term symbol* for this given state. The term symbol notation in atomic physics is defined by
 
 $$
 {}^{2S+1} L_{J}
@@ -546,7 +546,7 @@ Consider the ethylene molecule.
 
 (c) Construct the group table.
 
-(d) Introduce a \textit{less than} minimal basis of atomic orbitals by only considering the four hydrogen $1s$-atomic orbitals, $\{\chi_\alpha\}^4_{\alpha=1}$. This is not an adequate basis set but serves here to illustrate the principles of symmetry. Determine the action of the symmetry operations on each and every $\chi_\alpha$, in other words obtain the matrices $\Gamma(\hat{G})$ determined by
+(d) Introduce a *less than* minimal basis of atomic orbitals by only considering the four hydrogen $1s$-atomic orbitals, $\{\chi_\alpha\}^4_{\alpha=1}$. This is not an adequate basis set but serves here to illustrate the principles of symmetry. Determine the action of the symmetry operations on each and every $\chi_\alpha$, in other words obtain the matrices $\Gamma(\hat{G})$ determined by
 
 $$
 \hat{G}\chi_\alpha = \sum_\beta \chi_\beta \Gamma_{\beta\alpha}(\hat{G})
@@ -617,7 +617,7 @@ $$
 \quad \alpha \in \{x,y,z\}
 $$
 
-Note: This consideration is the underlying principle for \textit{spectroscopic selection rules} in physics.
+Note: This consideration is the underlying principle for *spectroscopic selection rules* in physics.
 
 
 ---------------------------------------------------------------------------
