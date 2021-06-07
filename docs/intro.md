@@ -7,7 +7,7 @@ Theoretical chemistry has made tremendous progress in the past few decades and i
 ---
 name: vision-fig
 ---
-Vision and goal statement for the VeloxChem project together with an illustration of an educational aspect of Python-driven quantum chemistry software.
+Vision and goal statement for the VeloxChem project.
 ```
 
 Alongside the development of methods and algorithms, we are witnessing an ever ongoing advancement of high-performance computing (HPC) cluster resources to reach higher number of floating point operations per second. As an example, the EuroHPC project is leading Europe toward exascale computing and comprises an entire supercomputing ecosystem with the ambition to strengthen European industry and academia alike. It brings us an exciting future at the same time as it challenges us. A view of the most recent TOP500 list gives a clear indication that heterogeneous hardware solutions are to be expected when such extreme performance numbers are to be reached and there is a community consensus among quantum chemists that an efficient utilization of general-purpose graphical processing units (GP-GPUs) is difficult to achieve in our software where the compute-intensive kernels involve 10$^4$--10$^5$ lines of code.
