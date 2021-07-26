@@ -1,19 +1,19 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: docs/intro
+format: jb-article
+root: docs/intro
+sections:
 - file: docs/units
 - file: docs/software
   sections:
-    - file: docs/installation
-    - file: docs/scf-optimization
-    - file: docs/analyze
+  - file: docs/installation
+  - file: docs/scf-optimization
+  - file: docs/analyze
 - file: docs/exercises
   sections:
-    - file: docs/exercise-orbitals
-    - file: docs/exercise-fock
-    - file: docs/exercise-dissociate
-    - file: docs/exercise-group-theory
-    - file: docs/exercise-correlation
+  - file: docs/exercise-orbitals
+  - file: docs/exercise-fock
+  - file: docs/exercise-dissociate
+  - file: docs/exercise-group-theory
+  - file: docs/exercise-correlation
 - file: docs/problems
+- file: docs/references
 - file: docs/appendix
