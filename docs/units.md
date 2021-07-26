@@ -1,5 +1,4 @@
-Atomic units
-============
+# Atomic units
 
 A central problem in molecular physics is to solve the time-independent Schrödinger equation for the electrons in the field of the nuclei. Most often atomic units are then adopted. For the hydrogen atom, we have
 
