@@ -336,8 +336,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="3dmolviewer_1627291551807254"  style="position: relative; width: 200px; height: 200px">
-        <p id="3dmolwarning_1627291551807254" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+<div class="output text_html"><div id="3dmolviewer_1627291851332489"  style="position: relative; width: 200px; height: 200px">
+        <p id="3dmolwarning_1627291851332489" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
         </div>
 <script>
@@ -360,17 +360,17 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://3dmol.org/build/3Dmol.js');
 }
 
-var viewer_1627291551807254 = null;
-var warn = document.getElementById("3dmolwarning_1627291551807254");
+var viewer_1627291851332489 = null;
+var warn = document.getElementById("3dmolwarning_1627291851332489");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_1627291551807254 = $3Dmol.createViewer($("#3dmolviewer_1627291551807254"),{backgroundColor:"white"});
-viewer_1627291551807254.zoomTo();
-	viewer_1627291551807254.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
-	viewer_1627291551807254.setStyle({"stick": {}});
-viewer_1627291551807254.render();
+viewer_1627291851332489 = $3Dmol.createViewer($("#3dmolviewer_1627291851332489"),{backgroundColor:"white"});
+viewer_1627291851332489.zoomTo();
+	viewer_1627291851332489.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
+	viewer_1627291851332489.setStyle({"stick": {}});
+viewer_1627291851332489.render();
 });
 </script></div></div>
 </div>
