@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Performing an SCF optimization &#8212; Molecular Quantum Mechanics (CB2070)</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -56,14 +53,14 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Analyzing and visualizing" href="analyze.html" />
     <link rel="prev" title="Software installation" href="installation.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -72,37 +69,42 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Molecular Quantum Mechanics (CB2070)</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Molecular Quantum Mechanics (CB2070)</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="units.html">
    Atomic units
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="software.html">
    Quantum chemistry software
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="installation.html">
      Software installation
@@ -119,14 +121,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="exercises.html">
    Computer exercises
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="exercise-orbitals.html">
      Orbitals and one-particle densities
@@ -153,8 +158,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="problems.html">
@@ -162,12 +165,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="appendix.html">
-   Appendices
+   Appendix
   </a>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -233,12 +242,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -353,7 +362,7 @@ and the output looks like</p>
                                                                                                                           
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.01 sec.                                                                   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
                                                                                                                           
 </pre></div>
 </div>
@@ -362,7 +371,7 @@ and the output looks like</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.979046315863 au. Time: 0.05 sec.                                   
+* Info * ...done. SCF energy in reduced basis set: -75.979046359568 au. Time: 0.04 sec.                                   
                                                                                                                           
 </pre></div>
 </div>
@@ -381,32 +390,32 @@ and the output looks like</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
                Iter. | Hartree-Fock Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
                --------------------------------------------------------------------------------------------               
-                  1       -76.025870618634    0.0000000000      0.09891485      0.01117789      0.00000000                
+                  1       -76.025869744699    0.0000000000      0.09892066      0.01121867      0.00000000                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026933036572   -0.0010624179      0.01914805      0.00293705      0.02595363                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026932827150   -0.0010630825      0.01920269      0.00294570      0.02594960                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3       -76.026981106009   -0.0000480694      0.00407267      0.00075489      0.00506265                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3       -76.026981056596   -0.0000482294      0.00412658      0.00076652      0.00507499                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4       -76.026983623221   -0.0000025172      0.00243408      0.00042328      0.00165576                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4       -76.026983601528   -0.0000025449      0.00247905      0.00043111      0.00166621                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5       -76.026984175657   -0.0000005524      0.00021776      0.00003665      0.00051254                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5       -76.026984175645   -0.0000005741      0.00021766      0.00003639      0.00052311                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6       -76.026984187023   -0.0000000114      0.00003207      0.00000540      0.00012065                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6       -76.026984187023   -0.0000000114      0.00003206      0.00000540      0.00012084                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7       -76.026984187254   -0.0000000002      0.00000209      0.00000029      0.00001665                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7       -76.026984187254   -0.0000000002      0.00000208      0.00000029      0.00001663                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  8       -76.026984187255   -0.0000000000      0.00000054      0.00000009      0.00000088                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  8       -76.026984187255   -0.0000000000      0.00000053      0.00000008      0.00000087                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-               *** SCF converged in 8 iterations. Time: 0.48 sec.                                                         
+               *** SCF converged in 8 iterations. Time: 0.50 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -416,7 +425,8 @@ and the output looks like</p>
                Electronic Energy                  :      -85.3706223452 au                                                
                Nuclear Repulsion Energy           :        9.3436381580 au                                                
                ------------------------------------                                                                       
-               Gradient Norm                      :        0.0000005364 au                                                
+               Gradient Norm                      :        0.0000005316 au                                                
+                                                                                                                          
                                                                                                                           
                Ground State Information                                                                                   
                ------------------------                                                                                   
@@ -436,8 +446,8 @@ and the output looks like</p>
                Molecular Orbital No.   2:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -1.34520 au                                                                      
-               (   1 O   2s  :    -0.44) (   1 O   3s  :    -0.36) (   2 H   1s  :    -0.20)                              
-               (   3 H   1s  :    -0.20)                                                                                  
+               (   1 O   2s  :     0.44) (   1 O   3s  :     0.36) (   2 H   1s  :     0.20)                              
+               (   3 H   1s  :     0.20)                                                                                  
                                                                                                                           
                Molecular Orbital No.   3:                                                                                 
                --------------------------                                                                                 
@@ -448,8 +458,8 @@ and the output looks like</p>
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.57109 au                                                                      
-               (   1 O   2s  :     0.15) (   1 O   3s  :     0.36) (   1 O   1p0 :    -0.55)                              
-               (   1 O   2p0 :    -0.36) (   2 H   1s  :    -0.21) (   3 H   1s  :    -0.21)                              
+               (   1 O   2s  :    -0.15) (   1 O   3s  :    -0.36) (   1 O   1p0 :     0.55)                              
+               (   1 O   2p0 :     0.36) (   2 H   1s  :     0.21) (   3 H   1s  :     0.21)                              
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
@@ -478,9 +488,9 @@ and the output looks like</p>
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.87271 au                                                                      
-               (   1 O   2s  :    -0.25) (   1 O   3s  :     0.34) (   1 O   1p0 :    -0.34)                              
-               (   2 H   1s  :     0.77) (   2 H   2s  :    -0.54) (   2 H   1p-1:     0.31)                              
-               (   3 H   1s  :     0.77) (   3 H   2s  :    -0.54) (   3 H   1p-1:    -0.31)                              
+               (   1 O   2s  :     0.25) (   1 O   3s  :    -0.34) (   1 O   1p0 :     0.34)                              
+               (   2 H   1s  :    -0.77) (   2 H   2s  :     0.54) (   2 H   1p-1:    -0.31)                              
+               (   3 H   1s  :    -0.77) (   3 H   2s  :     0.54) (   3 H   1p-1:     0.31)                              
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -533,7 +543,7 @@ and the output looks like</p>
         
           By Patrick Norman<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -542,11 +552,9 @@ and the output looks like</p>
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
