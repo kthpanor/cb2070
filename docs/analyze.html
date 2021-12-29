@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analyzing and visualizing &#8212; Molecular Quantum Mechanics (CB2070)</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,32 +31,35 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Computer exercises" href="exercises.html" />
-    <link rel="prev" title="Performing an SCF optimization" href="scf-optimization.html" />
+    <link rel="prev" title="Many-electron wave functions" href="scf-optimization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -73,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -82,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -114,7 +121,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="scf-optimization.html">
-     Performing an SCF optimization
+     Many-electron wave functions
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -278,7 +285,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#molecular-structure">
@@ -296,8 +303,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#one-and-two-particle-densities">
-   One- and two-particle densities
+  <a class="reference internal nav-link" href="#one-particle-densities">
+   One-particle densities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-particle-density">
+   Two-particle density
   </a>
  </li>
 </ul>
@@ -311,11 +323,11 @@
         
               <div>
                 
-  <div class="section" id="analyzing-and-visualizing">
+  <div class="tex2jax_ignore mathjax_ignore section" id="analyzing-and-visualizing">
 <h1>Analyzing and visualizing<a class="headerlink" href="#analyzing-and-visualizing" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="molecular-structure">
 <h2>Molecular structure<a class="headerlink" href="#molecular-structure" title="Permalink to this headline">¶</a></h2>
-<p>Molecular structures can be inspected with use of the <code class="docutils literal notranslate"><span class="pre">py3Dmol</span></code> module. We initialize a view and include a stick representation of the water molecule. The view is interactive, so you can rotate, translate, zoom in and out.</p>
+<p>Molecular structures can be inspected with use of the <code class="docutils literal notranslate"><span class="pre">py3Dmol</span></code> module. We initialize a view and include a stick representation of the water molecule. The view is interactive, so you can rotate, translate, zoom in and out. An illustration of the van der Waals surface is added to give an idea of the “molecular size”, or the electron cloud.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">py3Dmol</span> <span class="k">as</span> <span class="nn">p3d</span>
@@ -327,17 +339,21 @@
 <span class="s2">H   -0.740848095288        0.582094932012        0.000000000000</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
-<span class="n">v</span> <span class="o">=</span> <span class="n">p3d</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">p3d</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 
 <span class="n">v</span><span class="o">.</span><span class="n">addModel</span><span class="p">(</span><span class="n">h2o_xyz</span><span class="p">,</span> <span class="s2">&quot;xyz&quot;</span><span class="p">)</span>
 <span class="n">v</span><span class="o">.</span><span class="n">setStyle</span><span class="p">({</span><span class="s1">&#39;stick&#39;</span><span class="p">:{}})</span>
+<span class="n">v</span><span class="o">.</span><span class="n">addSurface</span><span class="p">(</span><span class="n">p3d</span><span class="o">.</span><span class="n">VDW</span><span class="p">,{</span><span class="s1">&#39;opacity&#39;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">})</span>
+
+<span class="n">v</span><span class="o">.</span><span class="n">zoomTo</span><span class="p">()</span>
+
 <span class="n">v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="3dmolviewer_1627291851332489"  style="position: relative; width: 200px; height: 200px">
-        <p id="3dmolwarning_1627291851332489" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+<div class="output text_html"><div id="3dmolviewer_1640805389879589"  style="position: relative; width: 300px; height: 300px">
+        <p id="3dmolwarning_1640805389879589" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
         </div>
 <script>
@@ -360,17 +376,19 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://3dmol.org/build/3Dmol.js');
 }
 
-var viewer_1627291851332489 = null;
-var warn = document.getElementById("3dmolwarning_1627291851332489");
+var viewer_1640805389879589 = null;
+var warn = document.getElementById("3dmolwarning_1640805389879589");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_1627291851332489 = $3Dmol.createViewer($("#3dmolviewer_1627291851332489"),{backgroundColor:"white"});
-viewer_1627291851332489.zoomTo();
-	viewer_1627291851332489.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
-	viewer_1627291851332489.setStyle({"stick": {}});
-viewer_1627291851332489.render();
+viewer_1640805389879589 = $3Dmol.createViewer($("#3dmolviewer_1640805389879589"),{backgroundColor:"white"});
+viewer_1640805389879589.zoomTo();
+	viewer_1640805389879589.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
+	viewer_1640805389879589.setStyle({"stick": {}});
+	viewer_1640805389879589.addSurface(1,{"opacity": 0.7, "color": "green"});
+	viewer_1640805389879589.zoomTo();
+viewer_1640805389879589.render();
 });
 </script></div></div>
 </div>
@@ -379,34 +397,53 @@ viewer_1627291851332489.render();
 <span id="section-scf-info"></span><h2>SCF information<a class="headerlink" href="#scf-information" title="Permalink to this headline">¶</a></h2>
 <p>The SCF driver object contains a wealth of useful information:</p>
 <ul class="simple">
-<li><p>The final SCF energy: <code class="docutils literal notranslate"><span class="pre">scfdrv.get_scf_energy()</span></code></p></li>
-<li><p>A Python dictionary of tensors: <code class="docutils literal notranslate"><span class="pre">scfdrv.scf_tensors</span></code></p>
+<li><p>The final SCF energy: <code class="docutils literal notranslate"><span class="pre">scf_drv.get_scf_energy()</span></code></p></li>
+<li><p>A Python dictionary of tensors: <code class="docutils literal notranslate"><span class="pre">scf_drv.scf_tensors</span></code></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>, for the molecular orbital coefficients.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code>, for the orbital energies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code>, for the overlap integral.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code>, for the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin density matrices as a tuple of NumPy arrays.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code>, for the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin Fock matrices as a tuple of NumPy arrays.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>, for the molecular orbital coefficients</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code>, for the orbital energies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code>, for the overlap integral</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code>, for the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin density matrices as a tuple of NumPy arrays</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code>, for the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin Fock matrices as a tuple of NumPy arrays</p></li>
 </ul>
 </li>
 </ul>
-<p>The output from</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">scf_drv</span><span class="o">.</span><span class="n">scf_tensors</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hartree–Fock energy: </span><span class="si">{</span><span class="n">scf_drv</span><span class="o">.</span><span class="n">get_scf_energy</span><span class="p">()</span><span class="si">:</span><span class="s1">14.10f</span><span class="si">}</span><span class="s1"> a.u.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dictionary keys:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">scf_tensors</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Orbital energies:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">scf_tensors</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>becomes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">])</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hartree–Fock energy: -76.0269841873 a.u.
+
+Dictionary keys:
+ dict_keys([&#39;C&#39;, &#39;E&#39;, &#39;D&#39;, &#39;F&#39;, &#39;S&#39;, &#39;C_alpha&#39;, &#39;C_beta&#39;, &#39;E_alpha&#39;, &#39;E_beta&#39;, &#39;D_alpha&#39;, &#39;D_beta&#39;, &#39;F_alpha&#39;, &#39;F_beta&#39;]) 
+
+Orbital energies:
+ [-20.54818972  -1.345205    -0.70584505  -0.57108597  -0.49456798
+   0.18786924   0.2585202    0.79748539   0.87271166   1.16315036
+   1.20011488   1.25334062   1.43477498   1.48313855   1.67303123
+   1.86242483   1.95691981   2.48659724   2.53078557   3.30367059
+   3.35068938   3.53410961   3.87596599   4.16973921]
 </pre></div>
 </div>
-<p>So, for example, the orbital energies are available as a NumPy array by an assignment of the form</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">scf_tensors</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">]</span>
-</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="molecular-orbitals">
 <span id="section-orbitals"></span><h2>Molecular orbitals<a class="headerlink" href="#molecular-orbitals" title="Permalink to this headline">¶</a></h2>
-<p>The values of orbitals at given coordinates are readily available. Below is an example in terms of finding the values of the <span class="math notranslate nohighlight">\(1s\)</span>-orbital (<span class="math notranslate nohighlight">\(\alpha\)</span>-spin) along the <span class="math notranslate nohighlight">\(z\)</span>-axis.  It is here assumed that the SCF optimization of the wave function has first been performed.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vis_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">VisualizationDriver</span><span class="p">()</span>
+<p>The values of orbitals at given coordinates are readily available. Below is an example in terms of finding the values of the <span class="math notranslate nohighlight">\(1s\)</span>-orbital (<span class="math notranslate nohighlight">\(\alpha\)</span>-spin) along the <span class="math notranslate nohighlight">\(z\)</span>-axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">vis_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">VisualizationDriver</span><span class="p">()</span>
 <span class="n">mol_orbs</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">mol_orbs</span>
 
 <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
@@ -415,11 +452,24 @@ viewer_1627291851332489.render();
 
 <span class="n">mo_1s</span> <span class="o">=</span> <span class="mi">0</span> 
 <span class="n">mo_1s_values</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_mo</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mol_orbs</span><span class="p">,</span> <span class="n">mo_1s</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">mo_1s_values</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distance from oxyxen nucleus (Bohr)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Value of 1s-orbital&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="one-and-two-particle-densities">
-<h2>One- and two-particle densities<a class="headerlink" href="#one-and-two-particle-densities" title="Permalink to this headline">¶</a></h2>
+<div class="cell_output docutils container">
+<img alt="../_images/analyze_6_0.png" src="../_images/analyze_6_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="one-particle-densities">
+<h2>One-particle densities<a class="headerlink" href="#one-particle-densities" title="Permalink to this headline">¶</a></h2>
 <p>The one-particle density for an <span class="math notranslate nohighlight">\(N\)</span>-electron system is defined as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -433,6 +483,40 @@ viewer_1627291851332489.render();
 \[
      \int n(\mathbf{r}) \, d^3\mathbf{r} = N
 \]</div>
+<p>For a Hartree–Fock state, one-particle densities are available as illustrated in the example script below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vis_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">VisualizationDriver</span><span class="p">()</span>
+<span class="n">density</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">density</span>
+
+<span class="n">one_part_den</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_density</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">140</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">coords</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">one_part_den</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distance from oxyxen nucleus (Bohr)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;One-particle density (a.u.)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/analyze_8_0.png" src="../_images/analyze_8_0.png" />
+</div>
+</div>
+<p>As indicated by the string argument “alpha”, the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin densities can be determined individually, referring to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+    n(\mathbf{r}) = n^\alpha(\mathbf{r}) + n^\beta(\mathbf{r})
+\]</div>
+<p>For a closed shell system, the two spin densities are equal and thus equal to half the total one-particle density.</p>
+</div>
+<div class="section" id="two-particle-density">
+<h2>Two-particle density<a class="headerlink" href="#two-particle-density" title="Permalink to this headline">¶</a></h2>
 <p>The two-particle density for an <span class="math notranslate nohighlight">\(N\)</span>-electron system is defined as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -442,30 +526,28 @@ viewer_1627291851332489.render();
     \, d^3\mathbf{r}_3 \cdots d^3\mathbf{r}_N
 \]</div>
 <p>and it refers to the probability density of finding one electron at position <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and another at position <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> in space regardless of the distribution of others.</p>
-<p>For a Hartree–Fock state, the one- and two particle densities are available as illustrated in the example script below. It is here assumed that the SCF optimization of the wave function has first been performed.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vis_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">VisualizationDriver</span><span class="p">()</span>
-<span class="n">density</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">density</span>
+<p>For a Hartree–Fock state, two particle densities are available as illustrated in the example script below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coord</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]]</span>
 
-<span class="c1"># list of coordinates in units of Bohr</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">coords</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-<span class="n">origin</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]]</span>
-
-<span class="n">one_part_den</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_density</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">)</span>
-
-<span class="n">two_part_den_aa</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_two_particle_density</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span>
+<span class="n">two_part_den_aa</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_two_particle_density</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span>
                                                <span class="n">density</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">)</span>
-<span class="n">two_part_den_ab</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_two_particle_density</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span>
+<span class="n">two_part_den_ab</span> <span class="o">=</span> <span class="n">vis_drv</span><span class="o">.</span><span class="n">get_two_particle_density</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span>
                                                <span class="n">density</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;beta&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-particle density     (same spin): </span><span class="si">{</span><span class="n">two_part_den_aa</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">6.4f</span><span class="si">}</span><span class="s1"> a.u.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-particle density (opposite spin): </span><span class="si">{</span><span class="n">two_part_den_ab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">6.4f</span><span class="si">}</span><span class="s1"> a.u.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>As indicated by the string argument “alpha”, the <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin densities can be determined individually, referring to the relation</p>
-<div class="math notranslate nohighlight">
-\[
-    n(\mathbf{r}) = n^\alpha(\mathbf{r}) + n^\beta(\mathbf{r})
-\]</div>
-<p>For a closed shell system, the two spin densities are equal and thus equal to half the total one-particle density.</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Two-particle density     (same spin): 0.0000 a.u.
+Two-particle density (opposite spin): 0.3878 a.u.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -492,16 +574,27 @@ viewer_1627291851332489.render();
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="scf-optimization.html" title="previous page">Performing an SCF optimization</a>
-    <a class='right-next' id="next-link" href="exercises.html" title="next page">Computer exercises</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="scf-optimization.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Many-electron wave functions</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="exercises.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Computer exercises</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -517,8 +610,7 @@ viewer_1627291851332489.render();
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
