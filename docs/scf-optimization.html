@@ -92,7 +92,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Introduction
+   Motivation
   </a>
  </li>
 </ul>
@@ -344,6 +344,22 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of atoms:&#39;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">.</span><span class="n">number_of_atoms</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons:&#39;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">.</span><span class="n">number_of_electrons</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of contracted basis functions:&#39;</span><span class="p">,</span> <span class="n">basis</span><span class="o">.</span><span class="n">get_dimensions_of_basis</span><span class="p">(</span><span class="n">molecule</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of atoms: 3
+Number of electrons: 10
+Number of contracted basis functions: 24
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="scf-optimization">
 <h2>SCF optimization<a class="headerlink" href="#scf-optimization" title="Permalink to this headline">¶</a></h2>
@@ -390,7 +406,7 @@
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.979046359571 a.u. Time: 0.06 sec.                                  
+* Info * ...done. SCF energy in reduced basis set: -75.979046359571 a.u. Time: 0.05 sec.                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -436,7 +452,7 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
 * Info * SCF tensors written to file: scf.tensors.h5                                                                      
                                                                                                                           
-               *** SCF converged in 8 iterations. Time: 0.86 sec.                                                         
+               *** SCF converged in 8 iterations. Time: 0.87 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -467,8 +483,8 @@
                Molecular Orbital No.   2:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -1.34520 a.u.                                                                    
-               (   1 O   2s  :    -0.44) (   1 O   3s  :    -0.36) (   2 H   1s  :    -0.20)                              
-               (   3 H   1s  :    -0.20)                                                                                  
+               (   1 O   2s  :     0.44) (   1 O   3s  :     0.36) (   2 H   1s  :     0.20)                              
+               (   3 H   1s  :     0.20)                                                                                  
                                                                                                                           
                Molecular Orbital No.   3:                                                                                 
                --------------------------                                                                                 
@@ -479,8 +495,8 @@
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.57109 a.u.                                                                    
-               (   1 O   2s  :     0.15) (   1 O   3s  :     0.36) (   1 O   1p0 :    -0.55)                              
-               (   1 O   2p0 :    -0.36) (   2 H   1s  :    -0.21) (   3 H   1s  :    -0.21)                              
+               (   1 O   2s  :    -0.15) (   1 O   3s  :    -0.36) (   1 O   1p0 :     0.55)                              
+               (   1 O   2p0 :     0.36) (   2 H   1s  :     0.21) (   3 H   1s  :     0.21)                              
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
@@ -490,14 +506,14 @@
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.18787 a.u.                                                                    
-               (   1 O   3s  :     1.02) (   1 O   1p0 :     0.19) (   1 O   2p0 :     0.33)                              
-               (   2 H   2s  :    -0.83) (   3 H   2s  :    -0.83)                                                        
+               (   1 O   3s  :    -1.02) (   1 O   1p0 :    -0.19) (   1 O   2p0 :    -0.33)                              
+               (   2 H   2s  :     0.83) (   3 H   2s  :     0.83)                                                        
                                                                                                                           
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.25852 a.u.                                                                    
-               (   1 O   1p-1:    -0.28) (   1 O   2p-1:    -0.67) (   2 H   2s  :     1.48)                              
-               (   3 H   2s  :    -1.48)                                                                                  
+               (   1 O   1p-1:     0.28) (   1 O   2p-1:     0.67) (   2 H   2s  :    -1.48)                              
+               (   3 H   2s  :     1.48)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
@@ -509,9 +525,9 @@
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.87271 a.u.                                                                    
-               (   1 O   2s  :    -0.25) (   1 O   3s  :     0.34) (   1 O   1p0 :    -0.34)                              
-               (   2 H   1s  :     0.77) (   2 H   2s  :    -0.54) (   2 H   1p-1:     0.31)                              
-               (   3 H   1s  :     0.77) (   3 H   2s  :    -0.54) (   3 H   1p-1:    -0.31)                              
+               (   1 O   2s  :     0.25) (   1 O   3s  :    -0.34) (   1 O   1p0 :     0.34)                              
+               (   2 H   1s  :    -0.77) (   2 H   2s  :     0.54) (   2 H   1p-1:    -0.31)                              
+               (   3 H   1s  :    -0.77) (   3 H   2s  :     0.54) (   3 H   1p-1:     0.31)                              
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -520,6 +536,18 @@
                (   2 H   1s  :    -0.59) (   2 H   1p0 :     0.24) (   3 H   1s  :    -0.59)                              
                (   3 H   1p0 :     0.24)                                                                                  
                                                                                                                           
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hartree–Fock energy: </span><span class="si">{</span><span class="n">scf_drv</span><span class="o">.</span><span class="n">get_scf_energy</span><span class="p">()</span><span class="si">:</span><span class="s1">16.10f</span><span class="si">}</span><span class="s1"> Hartree&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hartree–Fock energy:   -76.0269841873 Hartree
 </pre></div>
 </div>
 </div>

@@ -32,7 +32,7 @@ Character tables
 ```{table} Character table for the $D_{2h}$ point group.
 :name: point-group-d2h
 
-| Irrep  | $\hat{E}$ | $\hat{C}_2(z)$ | $\hat{C}_2(y)$ | $\hat{C}_2(x)$ | $\hat{i}$ | $\hat{\sigma}(xy)$}| $\hat{\sigma}(xz)$ | $\hat{\sigma}(yz)$ | Operation |
+| Irrep  | $\hat{E}$ | $\hat{C}_2(z)$ | $\hat{C}_2(y)$ | $\hat{C}_2(x)$ | $\hat{i}$ | $\hat{\sigma}(xy)$| $\hat{\sigma}(xz)$ | $\hat{\sigma}(yz)$ | Operation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | $A_g$ | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |$x^2$, $y^2$, $z^2$ |
 | $B_{1g}$ | 1 | 1 | -1 | -1 | 1 | 1 | -1 | -1 | $R_z$, $xy$ |
