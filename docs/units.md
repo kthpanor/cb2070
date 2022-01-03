@@ -31,17 +31,18 @@ Choose $\lambda$ so that
 
 $$
      \frac{\hbar^2}{m_\mathrm{e} \lambda^2} =
-     \frac{e^2}{4\pi\varepsilon_0 \lambda} = E_h
+     \frac{e^2}{4\pi\varepsilon_0 \lambda} \equiv E_h
 $$
 
 with the solution
 
-\begin{eqnarray*}
-     \lambda | = | 
-     \frac{\hbar^2 4\pi\varepsilon_0}{m_\mathrm{e} e^2} \equiv a_0 
-     E_h | = | 
+$$
+     \lambda =
+     \frac{\hbar^2 4\pi\varepsilon_0}{m_\mathrm{e} e^2} \equiv a_0; 
+\qquad 
+     E_h = 
      \frac{m_\mathrm{e} e^4}{(4\pi\varepsilon_0)^2 \hbar^2}
-\end{eqnarray*}
+$$
 
 With $E' = E/E_h$, we get
 

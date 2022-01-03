@@ -136,11 +136,13 @@ $$
 3 & 1\\1 & 7\\
 \end{pmatrix}; \quad
 %
-| \Psi_1 \rangle = 
+| \Psi_1 \rangle = N
 \begin{pmatrix}
 1\\2\\
 \end{pmatrix}
 $$
+
+where $N$ is a normalization constant.
 
 (d) Describe how the situation changes when the starting vector is chosen as an eigenvector of $\hat{\Omega}$.
 
