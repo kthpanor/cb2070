@@ -51,6 +51,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Computer exercises" href="exercises.html" />
@@ -240,11 +241,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/kthpanor/cb2070"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/analyze.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kthpanor/cb2070/issues/new?title=Issue%20on%20page%20%2Fdocs/analyze.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -265,7 +266,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/docs/analyze.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/kthpanor/cb2070/master?urlpath=tree/docs/docs/analyze.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -352,8 +353,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="3dmolviewer_164087294216976"  style="position: relative; width: 300px; height: 300px">
-        <p id="3dmolwarning_164087294216976" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+<div class="output text_html"><div id="3dmolviewer_164120043379519"  style="position: relative; width: 300px; height: 300px">
+        <p id="3dmolwarning_164120043379519" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
         </div>
 <script>
@@ -376,19 +377,19 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://3dmol.org/build/3Dmol.js');
 }
 
-var viewer_164087294216976 = null;
-var warn = document.getElementById("3dmolwarning_164087294216976");
+var viewer_164120043379519 = null;
+var warn = document.getElementById("3dmolwarning_164120043379519");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_164087294216976 = $3Dmol.createViewer($("#3dmolviewer_164087294216976"),{backgroundColor:"white"});
-viewer_164087294216976.zoomTo();
-	viewer_164087294216976.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
-	viewer_164087294216976.setStyle({"stick": {}});
-	viewer_164087294216976.addSurface(1,{"opacity": 0.7, "color": "green"});
-	viewer_164087294216976.zoomTo();
-viewer_164087294216976.render();
+viewer_164120043379519 = $3Dmol.createViewer($("#3dmolviewer_164120043379519"),{backgroundColor:"white"});
+viewer_164120043379519.zoomTo();
+	viewer_164120043379519.addModel("3\nwater                                                                                                                          \nO    0.000000000000        0.000000000000        0.000000000000                       \nH    0.740848095288        0.582094932012        0.000000000000                         \nH   -0.740848095288        0.582094932012        0.000000000000\n","xyz");
+	viewer_164120043379519.setStyle({"stick": {}});
+	viewer_164120043379519.addSurface(1,{"opacity": 0.7, "color": "green"});
+	viewer_164120043379519.zoomTo();
+viewer_164120043379519.render();
 });
 </script></div></div>
 </div>
@@ -400,11 +401,11 @@ viewer_164087294216976.render();
 <li><p>The final SCF energy: <code class="docutils literal notranslate"><span class="pre">scf_drv.get_scf_energy()</span></code></p></li>
 <li><p>A Python dictionary of tensors: <code class="docutils literal notranslate"><span class="pre">scf_drv.scf_tensors</span></code></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: molecular orbital coefficients as NumPy array</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code>: orbital energies as NumPy array</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code>: molecular orbital coefficients as a NumPy array</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">E</span></code>: orbital energies as a NumPy array</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">D</span></code>: <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin density matrices as a tuple of NumPy arrays</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">F</span></code>: <span class="math notranslate nohighlight">\(\alpha\)</span>- and <span class="math notranslate nohighlight">\(\beta\)</span>-spin Fock matrices as a tuple of NumPy arrays</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code>: overlap integrals as NumPy array</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code>: overlap integrals as a NumPy array</p></li>
 </ul>
 </li>
 </ul>
