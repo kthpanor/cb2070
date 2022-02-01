@@ -1,8 +1,6 @@
-Problems
-========
+# Problems
 
-Session 1
----------
+## Session 1
 
 **1**.
 The direct product of matrices is also known as the Kronecker product and it is defined as
@@ -148,8 +146,7 @@ where $N$ is a normalization constant.
 
 ---------------------------------------------------------------------------
 
-Session 2
----------
+## Session 2
 
 **1**.
 Let us define the one-electron density operator as
@@ -203,8 +200,7 @@ Reflect on your results in terms of a system of independent particles. Specifica
 
 ---------------------------------------------------------------------------
 
-Session 3
----------
+## Session 3
 
 **1**.
 Consider the one-electron operator
@@ -225,7 +221,7 @@ where orbitals $i$ and $s$ are occupied and unoccupied in the reference state, r
 ---------------------------------------------------------------------------
 
 **2**.
-Repeat the derivation in \ref{P:tmom} and derive an expression for transition moments between a reference determinant and a doubly-excited determinants, i.e.,
+Repeat the steps in the preious exercise and derive an expression for transition moments between a reference determinant and an associated doubly-excited determinant, i.e.,
 
 $$
 \langle \Psi_{ij}^{st} | \hat{\Omega} | \Psi \rangle 
@@ -273,8 +269,7 @@ Show the following relations for the corresponding integrals integrals
 
 ---------------------------------------------------------------------------
 
-Session 4
----------
+## Session 4
 
 **1**.
 The Fock operator reads
@@ -334,8 +329,7 @@ Tip: You will need the previously derived expression for the HF energy.
 
 ---------------------------------------------------------------------------
 
-Session 5
----------
+## Session 5
 
 **1**.
 Introduce a unitary transformation of the occupied orbitals
@@ -366,8 +360,7 @@ This result is known as Koopmans' theorem.
 
 ---------------------------------------------------------------------------
 
-Session 6
----------
+## Session 6
 
 **1**.
 Introduce a set of non-orthogonal basis functions (or atomic orbitals) denoted as $\{\chi_\alpha\}$. In this basis, show that the matrix representation of the Fock operator can be written on the form
@@ -425,8 +418,7 @@ Introduce a non-unitary change of the AO basis
 
 ---------------------------------------------------------------------------
 
-Session 7
----------
+## Session 7
 
 **1**.
 Return to Problem 4 of Session 1.
@@ -536,8 +528,7 @@ where $N_S$ and $N_A$ are normalization constants.
 
 ---------------------------------------------------------------------------
 
-Session 8
----------
+## Session 8
 
 **1**.
 Consider the ethylene molecule.
@@ -581,8 +572,7 @@ Compare with the rows in character table and determine which irreps are spanned 
 
 ---------------------------------------------------------------------------
 
-Session 9
----------
+## Session 9
 
 **1**.
 Consider a *trans*-butadiene molecule in the $xy$-plane.
@@ -624,8 +614,7 @@ Note: This consideration is the underlying principle for *spectroscopic selectio
 
 ---------------------------------------------------------------------------
 
-Session 10
----------
+## Session 10
 
 **1**.
 Consider the hydrogen molecule at the equilibrium bond length of 0.741 {\AA}. The HF ground state and the doubly excited determinant are denoted
@@ -658,8 +647,7 @@ In a minimal STO-3G basis set, the following integrals  (in a.u.) are available 
 
 ---------------------------------------------------------------------------
 
-Session 11
----------
+## Session 11
 
 **1**.
 Consider the setup made in Problem 1 of Session 10. Write the CID ground-state wave function on the following form
@@ -739,8 +727,7 @@ $$
 
 ---------------------------------------------------------------------------
 
-Session 12
-----------
+## Session 12
 
 **1**.
 Consider the setup made in Problem 1 of Session 10 and partition the Hamiltonian according to
@@ -794,8 +781,7 @@ where summations run over occupied (indices $i$ and $j$) and unoccupied (indices
 
 ---------------------------------------------------------------------------
 
-Session 13
-----------
+## Session 13
 
 **1**.
 Consider the setup made in Problem 1 of Session 10. With the approach from Problem 1 of Session 2, determine an expression for the  one-electron density, $n(\mathbf{r})$, of the CID wave function in terms of the spatial MOs.
@@ -831,8 +817,7 @@ Consider the setup made in Problem 1 of Session 10. With the approach from Probl
 
 ---------------------------------------------------------------------------
 
-Session 14
-----------
+## Session 14
 
 Choose from the extra problems.
 
