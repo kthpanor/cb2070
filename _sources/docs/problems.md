@@ -4,7 +4,7 @@
 
 **1**.
 The direct product of matrices is also known as the Kronecker product and it is defined as
-%
+
 $$
 \mathbf{A} \otimes \mathbf{B} =
 \begin{pmatrix}
@@ -13,39 +13,39 @@ a_{11} \mathbf{B} & \cdots & a_{n1} \mathbf{B} \\
 a_{n1} \mathbf{B} & \cdots & a_{nn} \mathbf{B} \\
 \end{pmatrix}
 $$
-%
+
 Two important identities are
-%
+
 \begin{eqnarray*}
 \mathbf{A} \otimes (\mathbf{B} + \mathbf{C} ) & = &
 \mathbf{A} \otimes \mathbf{B} + \mathbf{A} \otimes \mathbf{C} \\
 (\mathbf{A} \otimes \mathbf{B})(\mathbf{C} \otimes \mathbf{D}) & = &
 (\mathbf{A} \mathbf{C}) \otimes (\mathbf{B} \mathbf{D}) 
 \end{eqnarray*}
-%
+
 Let $\mathbf{A}$ and $\mathbf{B}$ be operator matrices in charge conjugation and spin spaces of a single electron, respectively. Let $\mathbf{C}$ and $\mathbf{D}$ be two corresponding state vectors. Show the second identity by explicit matrix calculations.
 
 ---------------------------------------------------------------------------
 
 **2**.
 Generators for rotations of electronic wave functions are the angular momentum operators. A finite rotation an angle $\phi$ about axis $\mathbf{n}$ is achieved by the *total* angular momentum operator
-%
+
 $$
 \hat{R}(\phi, \mathbf{n} ) = 
 \exp(-i\frac{\phi}{\hbar}(\mathbf{n} \cdot \hat{\mathbf{j}})) = 
 \exp(-i\frac{\phi}{\hbar}(\mathbf{n} \cdot \hat{\mathbf{l}})) \otimes 
 \exp(-i\frac{\phi}{\hbar}(\mathbf{n} \cdot \hat{\mathbf{s}})) 
 $$
-%
+
 Show that
-%
+
 $$
 \hat{\mathbf{j}} = \hat{\mathbf{l}} \otimes \hat{\mathbf{I}} +
 \hat{\mathbf{I}} \otimes \hat{\mathbf{s}}
 $$
-%
+
 or, in other words,
-%
+
 $$
 e^{\mathbf{A}} \otimes e^{\mathbf{B}} = 
 e^{\mathbf{A}\otimes \mathbf{I} + \mathbf{I} \otimes \mathbf{B}}
@@ -70,7 +70,7 @@ $$
 
 **4**.
 A state vector in a two-electron spin-space is given by
-%
+
 $$
 | \Psi \rangle =
 \begin{pmatrix}
