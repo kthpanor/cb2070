@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -228,7 +228,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -262,14 +262,24 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Software installation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="software-installation">
@@ -281,20 +291,20 @@
 </div></blockquote>
 <p>Install the version for 64 bit computers that comes with Python 3.9.</p>
 <p>Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system. Conda supports multiple <em>environments</em> and you start in the one named <code class="docutils literal notranslate"><span class="pre">base</span></code> as is typically indicated by the prompt. To create a new and additional environment named <code class="docutils literal notranslate"><span class="pre">vlxenv</span></code> and install VeloxChem, Matplotlib, and Jupyter notebook (and package dependencies such as NumPy and SciPy) into it, you enter the following command line statement</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n vlxenv veloxchem matplotlib jupyterlab py3Dmol -c veloxchem -c conda-forge
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n cb2070 veloxchem jupyterlab matplotlib py3Dmol -c veloxchem -c conda-forge
 </pre></div>
 </div>
 <p>You can list your conda environments</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env list
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env list
 </pre></div>
 </div>
 <p>The activated environment will be marked with an asterisk (the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment to begin with) and you can activate your new environment with the command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate vlxenv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate vlxenv
 </pre></div>
 </div>
 <p>as should be indicated by getting a modified prompt.</p>
 <p>Inside this newly created environment, you should now be ready to start a Jupyter notebook with the command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ jupyter-notebook
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-notebook
 </pre></div>
 </div>
 <p>which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells.</p>
@@ -322,8 +332,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="software.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -340,19 +350,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Patrick Norman<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Patrick Norman<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

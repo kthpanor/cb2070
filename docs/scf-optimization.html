@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -228,7 +228,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -279,7 +279,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -309,7 +309,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Many-electron wave functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-the-veloxchem-module">
+   Import the VeloxChem module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-the-system">
+   Define the system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scf-optimization">
+   SCF optimization
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="many-electron-wave-functions">
@@ -390,7 +423,7 @@ Number of contracted basis functions: 24
                                                                                                                           
 * Info * Nuclear repulsion energy: 9.3436381577 a.u.                                                                      
                                                                                                                           
-* Info * Overlap matrix computed in 0.01 sec.                                                                             
+* Info * Overlap matrix computed in 0.00 sec.                                                                             
                                                                                                                           
 * Info * Kinetic energy matrix computed in 0.00 sec.                                                                      
                                                                                                                           
@@ -407,7 +440,7 @@ Number of contracted basis functions: 24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.979046359571 a.u. Time: 0.11 sec.                                  
+* Info * ...done. SCF energy in reduced basis set: -75.979046359571 a.u. Time: 0.06 sec.                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -415,14 +448,12 @@ Number of contracted basis functions: 24
                                                                                                                           
 * Info * Kinetic energy matrix computed in 0.00 sec.                                                                      
                                                                                                                           
-* Info * Nuclear potential matrix computed in 0.01 sec.                                                                   
+* Info * Nuclear potential matrix computed in 0.00 sec.                                                                   
                                                                                                                           
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                                                                                                          
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -455,7 +486,7 @@ Number of contracted basis functions: 24
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
 * Info * SCF tensors written to file: scf.tensors.h5                                                                      
                                                                                                                           
-               *** SCF converged in 8 iterations. Time: 1.02 sec.                                                         
+               *** SCF converged in 8 iterations. Time: 0.83 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -481,7 +512,7 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   1:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:  -20.54819 a.u.                                                                    
-               (   1 O   1s  :    -1.00)                                                                                  
+               (   1 O   1s  :     1.00)                                                                                  
                                                                                                                           
                Molecular Orbital No.   2:                                                                                 
                --------------------------                                                                                 
@@ -498,13 +529,13 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.57109 a.u.                                                                    
-               (   1 O   2s  :     0.15) (   1 O   3s  :     0.36) (   1 O   1p0 :    -0.55)                              
-               (   1 O   2p0 :    -0.36) (   2 H   1s  :    -0.21) (   3 H   1s  :    -0.21)                              
+               (   1 O   2s  :    -0.15) (   1 O   3s  :    -0.36) (   1 O   1p0 :     0.55)                              
+               (   1 O   2p0 :     0.36) (   2 H   1s  :     0.21) (   3 H   1s  :     0.21)                              
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.49457 a.u.                                                                    
-               (   1 O   1p+1:     0.63) (   1 O   2p+1:     0.49)                                                        
+               (   1 O   1p+1:    -0.63) (   1 O   2p+1:    -0.49)                                                        
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -515,8 +546,8 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.25852 a.u.                                                                    
-               (   1 O   1p-1:     0.28) (   1 O   2p-1:     0.67) (   2 H   2s  :    -1.48)                              
-               (   3 H   2s  :     1.48)                                                                                  
+               (   1 O   1p-1:    -0.28) (   1 O   2p-1:    -0.67) (   2 H   2s  :     1.48)                              
+               (   3 H   2s  :    -1.48)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
@@ -535,9 +566,9 @@ Number of contracted basis functions: 24
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    1.16315 a.u.                                                                    
-               (   1 O   3s  :    -0.78) (   1 O   1p0 :     0.74) (   1 O   2p0 :    -1.31)                              
-               (   2 H   1s  :     0.59) (   2 H   1p0 :    -0.24) (   3 H   1s  :     0.59)                              
-               (   3 H   1p0 :    -0.24)                                                                                  
+               (   1 O   3s  :     0.78) (   1 O   1p0 :    -0.74) (   1 O   2p0 :     1.31)                              
+               (   2 H   1s  :    -0.59) (   2 H   1p0 :     0.24) (   3 H   1s  :    -0.59)                              
+               (   3 H   1p0 :     0.24)                                                                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -580,8 +611,8 @@ Number of contracted basis functions: 24
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="installation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -598,19 +629,17 @@ Number of contracted basis functions: 24
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Patrick Norman<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Patrick Norman<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
