@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Many-electron wave functions &#8212; Molecular Quantum Mechanics (CB2070)</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -41,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -55,10 +55,7 @@
     <link rel="next" title="Analyzing and visualizing" href="analyze.html" />
     <link rel="prev" title="Software installation" href="installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -74,10 +71,6 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -228,7 +221,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -279,7 +272,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -309,43 +302,10 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Many-electron wave functions</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#import-the-veloxchem-module">
-   Import the VeloxChem module
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#define-the-system">
-   Define the system
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scf-optimization">
-   SCF optimization
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="many-electron-wave-functions">
+  <div class="section" id="many-electron-wave-functions">
 <span id="section-scf"></span><h1>Many-electron wave functions<a class="headerlink" href="#many-electron-wave-functions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="import-the-veloxchem-module">
 <h2>Import the VeloxChem module<a class="headerlink" href="#import-the-veloxchem-module" title="Permalink to this headline">¶</a></h2>
@@ -421,7 +381,7 @@ Number of contracted basis functions: 24
                    ERI Screening Threshold         : 1.0e-12                                                              
                    Linear Dependence Threshold     : 1.0e-06                                                              
                                                                                                                           
-* Info * Nuclear repulsion energy: 9.3436381577 a.u.                                                                      
+* Info * Nuclear repulsion energy: 9.3436381580 a.u.                                                                      
                                                                                                                           
 * Info * Overlap matrix computed in 0.00 sec.                                                                             
                                                                                                                           
@@ -431,7 +391,7 @@ Number of contracted basis functions: 24
                                                                                                                           
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.01 sec.                                                                   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
                                                                                                                           
 </pre></div>
 </div>
@@ -440,7 +400,7 @@ Number of contracted basis functions: 24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.979046359571 a.u. Time: 0.06 sec.                                  
+* Info * ...done. SCF energy in reduced basis set: -75.979046359568 a.u. Time: 0.05 sec.                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -457,44 +417,46 @@ Number of contracted basis functions: 24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-               Iter. | Hartree-Fock Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Iter. | Hartree-Fock Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
                --------------------------------------------------------------------------------------------               
-                  1       -76.025869744700    0.0000000000      0.09892066      0.01121867      0.00000000                
+                  1       -76.025869744699    0.0000000000      0.09892066      0.01387080      0.00000000                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026932827150   -0.0010630824      0.01920269      0.00294570      0.02594960                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026932827149   -0.0010630825      0.01920269      0.00267041      0.06411136                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3       -76.026981056596   -0.0000482294      0.00412658      0.00076652      0.00507499                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3       -76.026981056596   -0.0000482294      0.00412658      0.00071078      0.01213453                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4       -76.026983601529   -0.0000025449      0.00247905      0.00043111      0.00166621                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4       -76.026983601528   -0.0000025449      0.00247905      0.00049775      0.00344584                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5       -76.026984175646   -0.0000005741      0.00021766      0.00003639      0.00052311                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5       -76.026984175645   -0.0000005741      0.00021766      0.00004105      0.00127498                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6       -76.026984187024   -0.0000000114      0.00003206      0.00000540      0.00012084                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6       -76.026984187023   -0.0000000114      0.00003206      0.00000517      0.00022194                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7       -76.026984187255   -0.0000000002      0.00000208      0.00000029      0.00001663                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7       -76.026984187254   -0.0000000002      0.00000208      0.00000027      0.00003531                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  8       -76.026984187256   -0.0000000000      0.00000053      0.00000008      0.00000087                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  8       -76.026984187255   -0.0000000000      0.00000053      0.00000008      0.00000154                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
 * Info * SCF tensors written to file: scf.tensors.h5                                                                      
                                                                                                                           
-               *** SCF converged in 8 iterations. Time: 0.81 sec.                                                         
+               *** SCF converged in 8 iterations. Time: 0.47 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Spin-Restricted Hartree-Fock:                                                                              
                -----------------------------                                                                              
                Total Energy                       :      -76.0269841873 a.u.                                              
-               Electronic Energy                  :      -85.3706223449 a.u.                                              
-               Nuclear Repulsion Energy           :        9.3436381577 a.u.                                              
+               Electronic Energy                  :      -85.3706223452 a.u.                                              
+               Nuclear Repulsion Energy           :        9.3436381580 a.u.                                              
                ------------------------------------                                                                       
                Gradient Norm                      :        0.0000005316 a.u.                                              
                                                                                                                           
@@ -512,63 +474,65 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   1:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:  -20.54819 a.u.                                                                    
-               (   1 O   1s  :     1.00)                                                                                  
+               (   1 O   1s  :    -1.00)                                                                                  
                                                                                                                           
                Molecular Orbital No.   2:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -1.34520 a.u.                                                                    
-               (   1 O   2s  :     0.44) (   1 O   3s  :     0.36) (   2 H   1s  :     0.20)                              
-               (   3 H   1s  :     0.20)                                                                                  
+               (   1 O   2s  :     0.87) (   2 H   1s  :     0.34) (   2 H   2s  :    -0.16)                              
+               (   3 H   1s  :     0.34) (   3 H   2s  :    -0.16)                                                        
                                                                                                                           
                Molecular Orbital No.   3:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.70585 a.u.                                                                    
-               (   1 O   1p-1:     0.49) (   1 O   2p-1:     0.22) (   2 H   1s  :     0.33)                              
-               (   3 H   1s  :    -0.33)                                                                                  
+               (   1 O   1p-1:    -0.72) (   2 H   1s  :    -0.56) (   2 H   2s  :     0.19)                              
+               (   3 H   1s  :     0.56) (   3 H   2s  :    -0.19)                                                        
                                                                                                                           
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.57109 a.u.                                                                    
-               (   1 O   2s  :    -0.15) (   1 O   3s  :    -0.36) (   1 O   1p0 :     0.55)                              
-               (   1 O   2p0 :     0.36) (   2 H   1s  :     0.21) (   3 H   1s  :     0.21)                              
+               (   1 O   2s  :     0.30) (   1 O   3s  :     0.19) (   1 O   1p0 :    -0.80)                              
+               (   2 H   1s  :    -0.35) (   3 H   1s  :    -0.35)                                                        
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.0 Energy:   -0.49457 a.u.                                                                    
-               (   1 O   1p+1:     0.63) (   1 O   2p+1:     0.49)                                                        
+               (   1 O   1p+1:     0.92)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.18787 a.u.                                                                    
-               (   1 O   3s  :    -1.02) (   1 O   1p0 :    -0.19) (   1 O   2p0 :    -0.33)                              
-               (   2 H   2s  :     0.83) (   3 H   2s  :     0.83)                                                        
+               (   1 O   3s  :    -0.93) (   1 O   1p0 :    -0.27) (   1 O   2p0 :    -0.21)                              
+               (   2 H   2s  :     0.79) (   3 H   2s  :     0.79)                                                        
                                                                                                                           
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.25852 a.u.                                                                    
-               (   1 O   1p-1:     0.28) (   1 O   2p-1:     0.67) (   2 H   2s  :    -1.48)                              
-               (   3 H   2s  :     1.48)                                                                                  
+               (   1 O   1p-1:     0.41) (   1 O   2p-1:     0.48) (   2 H   2s  :    -1.46)                              
+               (   3 H   2s  :     1.46)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.79749 a.u.                                                                    
-               (   1 O   1p-1:    -0.26) (   1 O   2p-1:    -0.49) (   2 H   1s  :     0.95)                              
-               (   2 H   2s  :    -0.66) (   2 H   1p0 :     0.16) (   3 H   1s  :    -0.95)                              
-               (   3 H   2s  :     0.66) (   3 H   1p0 :    -0.16)                                                        
+               (   1 O   1p-1:    -0.38) (   1 O   2p-1:    -0.32) (   2 H   1s  :     1.61)                              
+               (   2 H   2s  :    -1.47) (   2 H   1p0 :     0.16) (   3 H   1s  :    -1.61)                              
+               (   3 H   2s  :     1.47) (   3 H   1p0 :    -0.16)                                                        
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    0.87271 a.u.                                                                    
-               (   1 O   2s  :    -0.25) (   1 O   3s  :     0.34) (   1 O   1p0 :    -0.34)                              
-               (   2 H   1s  :     0.77) (   2 H   2s  :    -0.54) (   2 H   1p-1:     0.31)                              
-               (   3 H   1s  :     0.77) (   3 H   2s  :    -0.54) (   3 H   1p-1:    -0.31)                              
+               (   1 O   2s  :     0.50) (   1 O   3s  :    -0.62) (   1 O   1p0 :     0.49)                              
+               (   1 O   2p0 :    -0.26) (   2 H   1s  :    -1.30) (   2 H   2s  :     1.19)                              
+               (   2 H   1p-1:    -0.31) (   3 H   1s  :    -1.30) (   3 H   2s  :     1.19)                              
+               (   3 H   1p-1:     0.31)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.0 Energy:    1.16315 a.u.                                                                    
-               (   1 O   3s  :     0.78) (   1 O   1p0 :    -0.74) (   1 O   2p0 :     1.31)                              
-               (   2 H   1s  :    -0.59) (   2 H   1p0 :     0.24) (   3 H   1s  :    -0.59)                              
-               (   3 H   1p0 :     0.24)                                                                                  
+               (   1 O   2s  :    -0.24) (   1 O   3s  :    -0.64) (   1 O   1p0 :     1.08)                              
+               (   1 O   2p0 :    -1.81) (   2 H   1s  :     1.00) (   2 H   2s  :    -0.39)                              
+               (   2 H   1p0 :    -0.24) (   3 H   1s  :     1.00) (   3 H   2s  :    -0.39)                              
+               (   3 H   1p0 :    -0.24)                                                                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -611,42 +575,54 @@ Number of contracted basis functions: 24
 
               </div>
               
+        
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="installation.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Software installation</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="analyze.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analyzing and visualizing</p>
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="installation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Software installation</p>
+            </div>
+        </a>
     </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+     <div id="next">
+        <a class="right-next" href="analyze.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Analyzing and visualizing</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
 </div>
-            
+        
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Patrick Norman<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Patrick Norman<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
