@@ -248,7 +248,7 @@ Let $|\Psi \rangle$ be a Slater determinant and $\hat{\Omega}$ a two-electron op
 $$
 \hat{\Omega} = \sum_{j>i}^N \hat{\omega}(i,j)
 $$
-Show the following relations for the corresponding integrals integrals
+Show the following relations for the corresponding integrals
 %
 \begin{align*}
     \langle \Psi | \hat{\Omega} | \Psi \rangle &=
@@ -477,14 +477,23 @@ It is also convenient to introduce ladder operators that take the form
 (a) Show that $\Psi$ is *anti-symmetric* and *symmetric* with respect to particle interchange in orbital and spin spaces, respectively.
 
 (b) Show that
-$$\hat{J}^2 = \hat{J}^2_z + \hbar \hat{J}_z + \hat{J}_- \hat{J}_+$$
+
+$$
+\hat{J}^2 = \hat{J}^2_z + \hbar \hat{J}_z + \hat{J}_- \hat{J}_+
+$$
 
 (c) Show that 
-$$\hat{J}_z |\Psi\rangle = 2 \hbar | \Psi \rangle $$
+
+$$
+\hat{J}_z |\Psi\rangle = 2 \hbar | \Psi \rangle
+$$
 
 (d) Based on the relation
-$$\hat{J}^2 |\Psi\rangle = J(J+1) \hbar^2 | \Psi \rangle$$
-%
+
+$$
+\hat{J}^2 |\Psi\rangle = J(J+1) \hbar^2 | \Psi \rangle
+$$
+
 Determine $J$ as well as the corresponding values for $L$ and $S$.
 
 (e) Write down the *term symbol* for this given state. The term symbol notation in atomic physics is defined by
