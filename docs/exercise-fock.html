@@ -124,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="scf-optimization.html">
-   Many-electron wave functions
+   Wave function optimization
   </a>
  </li>
  <li class="toctree-l1">
@@ -467,7 +467,7 @@ title="Print to PDF"
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Perform an SCF optimization to obtain the Hartree–Fock wave function of water as described <a class="reference internal" href="scf-optimization.html#section-scf"><span class="std std-ref">here</span></a>.</p></li>
-<li><p>Diagonalize the overlap matrix, <span class="math notranslate nohighlight">\(\mathbf{S}\)</span>, with use of NumPy routine <code class="docutils literal notranslate"><span class="pre">linalg.eigh</span></code>. The access to the overlap matrix and other SCF tensors is described in <a class="reference internal" href="analyze.html#section-scf-info"><span class="std std-ref">this section</span></a>. Check that all eigenvalues are positive and, with use of NumPy routine <code class="docutils literal notranslate"><span class="pre">matmul</span></code> for matrix multiplication, verify that <span class="math notranslate nohighlight">\(\mathbf{U}^\dagger \mathbf{U} = \mathbf{I}\)</span>, where <span class="math notranslate nohighlight">\( \mathbf{U}\)</span> collects the eigenvectors of <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> as columns.</p></li>
+<li><p>Diagonalize the overlap matrix, <span class="math notranslate nohighlight">\(\mathbf{S}\)</span>, with use of NumPy routine <code class="docutils literal notranslate"><span class="pre">linalg.eigh</span></code>. The access to the overlap matrix and other SCF tensors is described in <a class="reference internal" href="scf-optimization.html#section-scf-info"><span class="std std-ref">this section</span></a>. Check that all eigenvalues are positive and, with use of NumPy routine <code class="docutils literal notranslate"><span class="pre">matmul</span></code> for matrix multiplication, verify that <span class="math notranslate nohighlight">\(\mathbf{U}^\dagger \mathbf{U} = \mathbf{I}\)</span>, where <span class="math notranslate nohighlight">\( \mathbf{U}\)</span> collects the eigenvectors of <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> as columns.</p></li>
 <li><p>Determine the transformation matrix <span class="math notranslate nohighlight">\(\mathbf{X} = \mathbf{S}^{-1/2}\)</span>.</p></li>
 <li><p>Determine the transformed Fock matrix <span class="math notranslate nohighlight">\(\mathbf{F}'\)</span>.</p></li>
 <li><p>Solve the transformed Hartree–Fock equation
