@@ -398,7 +398,7 @@ title="Print to PDF"
 <div><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </div></blockquote>
 <p>Install the version for 64 bit computers that comes with Python 3.10.</p>
-<p>Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system. Conda supports multiple <em>environments</em> and you start in the one named <code class="docutils literal notranslate"><span class="pre">base</span></code> as is typically indicated by the prompt.</p>
+<p>Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system (we recommend that you use the Anaconda Powershell prompt version on Windows). Conda supports multiple <em>environments</em> and you start in the one named <code class="docutils literal notranslate"><span class="pre">base</span></code> as is typically indicated by the prompt.</p>
 <p>Create a text file named <code class="docutils literal notranslate"><span class="pre">cb2070.yml</span></code> with the following content:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">cb2070</span>
 <span class="n">channels</span><span class="p">:</span>
@@ -412,15 +412,15 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>To create a new and additional environment named <code class="docutils literal notranslate"><span class="pre">cb2070</span></code> and install VeloxChem, Matplotlib, and Jupyter notebook (and package dependencies such as NumPy and SciPy) into it, you enter the following command line statement</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f cb2070.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>cb2070.yml
 </pre></div>
 </div>
 <p>You can list your conda environments</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env list
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>list
 </pre></div>
 </div>
 <p>The activated environment will be marked with an asterisk (the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment to begin with) and you can activate your new environment with the command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate cb2070
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>cb2070
 </pre></div>
 </div>
 <p>as should be indicated by getting a modified prompt.</p>
@@ -428,7 +428,7 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-notebook
 </pre></div>
 </div>
-<p>which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells.</p>
+<p>which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells, with examples on how to use it found on, <em>e.g.</em> the <a class="reference external" href="https://kthpanor.github.io/echem/docs/basics_notebook.html">eChem</a> page.</p>
 </section>
 
     <script type="text/x-thebe-config">
