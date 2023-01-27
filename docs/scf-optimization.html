@@ -477,7 +477,114 @@ title="Print to PDF"
 </section>
 <section id="define-the-molecule">
 <h2>Define the molecule<a class="headerlink" href="#define-the-molecule" title="Permalink to this headline">#</a></h2>
-<p>Define a water molecule and choose a basis set.</p>
+<p>The molecular structure is commonly expressed as xyz-coordinates, and need to be obtained from experimental measurements, calculations, or built manually. One approach is to use the build the molecule by construcing a <a class="reference external" href="https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system">SMILES</a> string defining the connectivities, and pass this to a package such as <a class="reference external" href="https://www.rdkit.org/">rdkit</a> which can then construct the molecule.The is discussed more on <a class="reference external" href="https://kthpanor.github.io/echem/docs/tutorials/wf_build.html">eChem</a>, and for now we note that the SMILES strings are often available on, <em>e.g.</em> wikipedia, with that of <a class="reference external" href="https://en.wikipedia.org/wiki/Caffeine">caffeine</a> being:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CN1C</span><span class="o">=</span><span class="n">NC2</span><span class="o">=</span><span class="n">C1C</span><span class="p">(</span><span class="o">=</span><span class="n">O</span><span class="p">)</span><span class="n">N</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="o">=</span><span class="n">O</span><span class="p">)</span><span class="n">N2C</span><span class="p">)</span><span class="n">C</span>
+</pre></div>
+</div>
+<p>Using this to build a conformer, visualize the structure, and print the xyz-coordinates:</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">py3Dmol</span> <span class="k">as</span> <span class="nn">p3d</span>
+<span class="kn">from</span> <span class="nn">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="nn">rdkit.Chem</span> <span class="kn">import</span> <span class="n">AllChem</span>
+
+<span class="k">def</span> <span class="nf">smilestoxyz</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+    <span class="n">mol_bare</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+    <span class="n">mol_full</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">mol_bare</span><span class="p">)</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">mol_full</span><span class="p">)</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">UFFOptimizeMolecule</span><span class="p">(</span><span class="n">mol_full</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolToXYZBlock</span><span class="p">(</span><span class="n">mol_full</span><span class="p">)</span>
+
+<span class="n">caffeine_xyz</span> <span class="o">=</span> <span class="n">smilestoxyz</span><span class="p">(</span><span class="s1">&#39;CN1C=NC2=C1C(=O)N(C(=O)N2C)C&#39;</span><span class="p">)</span>
+
+<span class="n">viewer</span> <span class="o">=</span> <span class="n">p3d</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">addModel</span><span class="p">(</span><span class="n">caffeine_xyz</span><span class="p">,</span> <span class="s1">&#39;xyz&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">setViewStyle</span><span class="p">({</span><span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;outline&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">})</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">setStyle</span><span class="p">({</span><span class="s2">&quot;stick&quot;</span><span class="p">:</span> <span class="p">{}})</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">caffeine_xyz</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="3dmolviewer_1674822383392039"  style="position: relative; width: 300px; height: 200px">
+        <p id="3dmolwarning_1674822383392039" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdn.jsdelivr.net/npm/3dmol@latest/build/3Dmol-min.min.js');
+}
+
+var viewer_1674822383392039 = null;
+var warn = document.getElementById("3dmolwarning_1674822383392039");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_1674822383392039 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1674822383392039"),{backgroundColor:"white"});
+viewer_1674822383392039.zoomTo();
+	viewer_1674822383392039.addModel("24\n\nC      3.263017    0.665602   -0.212720\nN      2.130944   -0.255164   -0.199731\nC      2.169427   -1.598733   -0.377053\nN      0.942209   -2.179661   -0.328611\nC      0.122902   -1.131387   -0.108457\nC      0.826777    0.020965   -0.033402\nC      0.176416    1.232141    0.162798\nO      0.830662    2.309769    0.212003\nN     -1.194119    1.221596    0.291480\nC     -1.895573    0.031642    0.181110\nO     -3.158218    0.040671    0.233363\nN     -1.232449   -1.164517    0.007067\nC     -1.967842   -2.428192   -0.134534\nC     -1.923424    2.489165    0.463343\nH      4.214642    0.108953   -0.348684\nH      3.149265    1.386854   -1.048964\nH      3.309011    1.216933    0.749769\nH      3.081659   -2.156591   -0.545352\nH     -1.328558   -3.298924    0.124931\nH     -2.841765   -2.451853    0.551042\nH     -2.320805   -2.537641   -1.181510\nH     -2.839017    2.343970    1.075630\nH     -2.209018    2.891819   -0.531182\nH     -1.306144    3.242585    0.997663\n","xyz");
+	viewer_1674822383392039.setViewStyle({"style": "outline", "color": "black", "width": 0.1});
+	viewer_1674822383392039.setStyle({"stick": {}});
+viewer_1674822383392039.render();
+});
+</script></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+
+C      3.263017    0.665602   -0.212720
+N      2.130944   -0.255164   -0.199731
+C      2.169427   -1.598733   -0.377053
+N      0.942209   -2.179661   -0.328611
+C      0.122902   -1.131387   -0.108457
+C      0.826777    0.020965   -0.033402
+C      0.176416    1.232141    0.162798
+O      0.830662    2.309769    0.212003
+N     -1.194119    1.221596    0.291480
+C     -1.895573    0.031642    0.181110
+O     -3.158218    0.040671    0.233363
+N     -1.232449   -1.164517    0.007067
+C     -1.967842   -2.428192   -0.134534
+C     -1.923424    2.489165    0.463343
+H      4.214642    0.108953   -0.348684
+H      3.149265    1.386854   -1.048964
+H      3.309011    1.216933    0.749769
+H      3.081659   -2.156591   -0.545352
+H     -1.328558   -3.298924    0.124931
+H     -2.841765   -2.451853    0.551042
+H     -2.320805   -2.537641   -1.181510
+H     -2.839017    2.343970    1.075630
+H     -2.209018    2.891819   -0.531182
+H     -1.306144    3.242585    0.997663
+</pre></div>
+</div>
+</div>
+</div>
+<p>Moving to a smaller system, we define the structure of a water molecule and choose a basis set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atomic coordinates in units of Angstrom</span>
@@ -575,7 +682,7 @@ Number of contracted basis functions: 24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.980526010891 a.u. Time: 0.06 sec.                                  
+* Info * ...done. SCF energy in reduced basis set: -75.980526010891 a.u. Time: 0.05 sec.                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -597,7 +704,7 @@ Number of contracted basis functions: 24
                   1       -76.025514170400    0.0000000000      0.09661894      0.01034981      0.00000000                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026530063454   -0.0010158931      0.01856585      0.00282747      0.02538073                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2       -76.026530063455   -0.0010158931      0.01856585      0.00282747      0.02538073                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3       -76.026575250863   -0.0000451874      0.00393964      0.00064892      0.00485806                
@@ -619,7 +726,7 @@ Number of contracted basis functions: 24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-               *** SCF converged in 8 iterations. Time: 0.72 sec.                                                         
+               *** SCF converged in 8 iterations. Time: 0.73 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -650,8 +757,8 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   2:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -1.33473 a.u.                                                                  
-               (   1 O   2s  :     0.44) (   1 O   3s  :     0.38) (   2 H   1s  :     0.19)                              
-               (   3 H   1s  :     0.19)                                                                                  
+               (   1 O   2s  :    -0.44) (   1 O   3s  :    -0.38) (   2 H   1s  :    -0.19)                              
+               (   3 H   1s  :    -0.19)                                                                                  
                                                                                                                           
                Molecular Orbital No.   3:                                                                                 
                --------------------------                                                                                 
@@ -662,8 +769,8 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.56605 a.u.                                                                  
-               (   1 O   2s  :    -0.15) (   1 O   3s  :    -0.35) (   1 O   1p-1:    -0.54)                              
-               (   1 O   2p-1:    -0.37) (   2 H   1s  :     0.21) (   3 H   1s  :     0.21)                              
+               (   1 O   2s  :     0.15) (   1 O   3s  :     0.35) (   1 O   1p-1:     0.54)                              
+               (   1 O   2p-1:     0.37) (   2 H   1s  :    -0.21) (   3 H   1s  :    -0.21)                              
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
@@ -673,28 +780,28 @@ Number of contracted basis functions: 24
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.18486 a.u.                                                                  
-               (   1 O   3s  :     1.00) (   1 O   1p-1:    -0.19) (   1 O   2p-1:    -0.34)                              
-               (   2 H   2s  :    -0.83) (   3 H   2s  :    -0.83)                                                        
+               (   1 O   3s  :    -1.00) (   1 O   1p-1:     0.19) (   1 O   2p-1:     0.34)                              
+               (   2 H   2s  :     0.83) (   3 H   2s  :     0.83)                                                        
                                                                                                                           
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.25567 a.u.                                                                  
-               (   1 O   1p+1:    -0.28) (   1 O   2p+1:    -0.67) (   2 H   2s  :    -1.44)                              
-               (   3 H   2s  :     1.44)                                                                                  
+               (   1 O   1p+1:     0.28) (   1 O   2p+1:     0.67) (   2 H   2s  :     1.44)                              
+               (   3 H   2s  :    -1.44)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.78605 a.u.                                                                  
-               (   1 O   1p+1:     0.27) (   1 O   2p+1:     0.45) (   2 H   1s  :     0.94)                              
-               (   2 H   2s  :    -0.69) (   2 H   1p-1:    -0.15) (   3 H   1s  :    -0.94)                              
-               (   3 H   2s  :     0.69) (   3 H   1p-1:     0.15)                                                        
+               (   1 O   1p+1:    -0.27) (   1 O   2p+1:    -0.45) (   2 H   1s  :    -0.94)                              
+               (   2 H   2s  :     0.69) (   2 H   1p-1:     0.15) (   3 H   1s  :     0.94)                              
+               (   3 H   2s  :    -0.69) (   3 H   1p-1:    -0.15)                                                        
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.85103 a.u.                                                                  
-               (   1 O   2s  :     0.26) (   1 O   3s  :    -0.32) (   1 O   1p-1:    -0.33)                              
-               (   2 H   1s  :    -0.79) (   2 H   2s  :     0.55) (   2 H   1p+1:     0.29)                              
-               (   3 H   1s  :    -0.79) (   3 H   2s  :     0.55) (   3 H   1p+1:    -0.29)                              
+               (   1 O   2s  :    -0.26) (   1 O   3s  :     0.32) (   1 O   1p-1:     0.33)                              
+               (   2 H   1s  :     0.79) (   2 H   2s  :    -0.55) (   2 H   1p+1:    -0.29)                              
+               (   3 H   1s  :     0.79) (   3 H   2s  :    -0.55) (   3 H   1p+1:     0.29)                              
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 

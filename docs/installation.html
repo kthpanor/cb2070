@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -409,6 +411,9 @@ title="Print to PDF"
   <span class="o">-</span> <span class="n">jupyterlab</span>
   <span class="o">-</span> <span class="n">veloxchem</span>
   <span class="o">-</span> <span class="n">py3dmol</span>
+  <span class="o">-</span> <span class="n">rdkit</span>
+  <span class="o">-</span> <span class="n">k3d</span>
+  <span class="o">-</span> <span class="n">ipywidgets</span><span class="o">=</span><span class="mf">7.7.1</span>
 </pre></div>
 </div>
 <p>To create a new and additional environment named <code class="docutils literal notranslate"><span class="pre">cb2070</span></code> and install VeloxChem, Matplotlib, and Jupyter notebook (and package dependencies such as NumPy and SciPy) into it, you enter the following command line statement</p>
@@ -423,7 +428,11 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>cb2070
 </pre></div>
 </div>
-<p>as should be indicated by getting a modified prompt.</p>
+<p>as should be indicated by getting a modified prompt. Next, in order to use our orbital viewer, you also need to run the commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>nbextension<span class="w"> </span>install<span class="w"> </span>--py<span class="w"> </span>--user<span class="w"> </span>k3d
+jupyter<span class="w"> </span>nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--py<span class="w"> </span>--user<span class="w"> </span>k3d
+</pre></div>
+</div>
 <p>Inside this newly created environment, you should now be ready to start a Jupyter notebook with the command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-notebook
 </pre></div>
