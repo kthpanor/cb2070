@@ -57,13 +57,13 @@ $$
 The rotation operator in spin space, resulting in a rotation an angle $\phi$ about axis $\mathbf{n}$, is
 %
 $$
-\hat{R}(\phi, \mathbf{n}) = e^{-i\phi(\mathbf{n} \cdot \hat{\boldsymbol{\sigma}})/2}
+R(\phi, \mathbf{n}) = e^{-i\phi(\mathbf{n} \cdot \boldsymbol{\sigma})/2}
 $$
-where the Cartesian components of the spin operator, $\hat{\boldsymbol{\sigma}}$, are the Pauli spin matrices. Show that
+where the Cartesian components of the spin operator, $\boldsymbol{\sigma}$, are the Pauli spin matrices. Show that
 %
 $$
-\hat{R}(\phi, \mathbf{n}) = \cos(\phi/2) \hat{I} - i 
-\sin(\phi/2) (\mathbf{n} \cdot \hat{\boldsymbol{\sigma}})
+R(\phi, \mathbf{n}) = \cos(\phi/2) \mathbf{I} - i 
+\sin(\phi/2) (\mathbf{n} \cdot \boldsymbol{\sigma})
 $$
 
 ---------------------------------------------------------------------------
