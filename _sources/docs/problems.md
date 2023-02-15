@@ -378,8 +378,6 @@ D_{\gamma\delta}
 \right]
 $$
 
-Determine the associated expression for the density matrix $\mathbf{D}$ in terms of the molecular orbital coefficients.
-
 ---------------------------------------------------------------------------
 
 **2**.
