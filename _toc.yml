@@ -2,8 +2,6 @@ format: jb-article
 root: docs/intro
 sections:
 - file: docs/installation
-- file: docs/scf-optimization
-- file: docs/analyze
 - file: docs/exercises
   sections:
   - file: docs/exercise-orbitals

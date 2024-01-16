@@ -1,9 +1,8 @@
 (exercise-2)=
-Fock matrices and SCF procedure
-===============================
+# Fock matrices and SCF procedure
 
-Density matrix
---------------
+## Density matrix
+
 For a given set of molecular orbital (MO) coefficients, the density matrix becomes equal to
 
 $$
@@ -12,8 +11,8 @@ $$
 
 where the summation over occupied orbitals include $\alpha$- as well as $\beta$-spin orbitals. For a closed shell system, these two sets of MO coefficients are equal.
 
-Fock matrix
------------
+## Fock matrix
+
 A density matrix defines a Fock matrix according to
 
 $$
@@ -26,8 +25,8 @@ $$
 
 introducing the one-electron Hamiltonian as well as the Coulomb and exchange two-electron integrals.
 
-Hartree--Fock equation
-----------------------
+## Hartree--Fock equation
+
 The Hartree--Fock (HF) equation in the atomic orbital (AO) basis takes the form
 
 $$
@@ -36,12 +35,11 @@ $$
 
 The Fock matrix depends on the MO coefficients through the density matrix so this equation needs to be solved iteratively in an SCF procedure. The HF equation corresponds to a matrix eigenvalue problem in a non-orthogonal basis. The overlaps between basis functions are collected in matrix $\mathbf{S}$. In this exercise, we will go through the steps required to solve the HF equation for the eigenvalues (or orbital energies) collected on the diagonal of matrix $\boldsymbol{\varepsilon}$ and the associated eigenvectors (or MO coefficients). This exercise will use the results from the associated problem in the problem set.
 
-Exercises
----------
+## Exercises
 
-1. Perform an SCF optimization to obtain the Hartree--Fock wave function of water as described [here](section-scf).
+1. Perform an SCF optimization to obtain the Hartree--Fock wave function of water as described [here](https://kthpanor.github.io/echem/docs/elec_struct/hf_example.html).
 
-2. Diagonalize the overlap matrix, $\mathbf{S}$, with use of NumPy routine `linalg.eigh`. The access to the overlap matrix and other SCF tensors is described in [this section](section-scf-info). Check that all eigenvalues are positive and, with use of NumPy routine `matmul` for matrix multiplication, verify that $\mathbf{U}^\dagger \mathbf{U} = \mathbf{I}$, where $ \mathbf{U}$ collects the eigenvectors of $\mathbf{S}$ as columns.
+2. Diagonalize the overlap matrix, $\mathbf{S}$, with use of NumPy routine `linalg.eigh`. The access to the overlap matrix and other SCF tensors is described in [here](https://kthpanor.github.io/echem/docs/elec_struct/hf_example.html#scf-information). Check that all eigenvalues are positive and, with use of NumPy routine `matmul` for matrix multiplication, verify that $\mathbf{U}^\dagger \mathbf{U} = \mathbf{I}$, where $ \mathbf{U}$ collects the eigenvectors of $\mathbf{S}$ as columns.
 
 3. Determine the transformation matrix $\mathbf{X} = \mathbf{S}^{-1/2}$.
 
