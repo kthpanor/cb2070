@@ -1,9 +1,7 @@
 (exercise-1)=
-Orbitals and one-particle densities
-===================================
+# Orbitals and one-particle densities
 
-Basis sets
-----------
+## Basis sets
 
 The SCF solution of the Hartree--Fock equation is found in a finite basis of predefined and tabulated atomic orbitals (AOs) in which the molecular orbitals (MOs) are expanded as a linear combination of atomic orbitals (LCAO):
 
@@ -25,12 +23,11 @@ The AOs are centered at the atomic positions. Typically one adopts identical set
 | Polarization | Basis functions with higher angular momenta; important for chemical bonding; size for second-row elements is $[3s2p1d]$ | cc-pVDZ |
 | Diffuse | Basis functions with small exponents; important for excited states; sizes for second-row elements are $[4s3p]$ for 6-31+G and $[4s3p2d]$ for aug-cc-pVDZ |  6-31+G, aug-cc-pVDZ |
 
-One-particle densities
-----------------------
-The values of orbitals and one-particle densities at points in space are readily obtained with use of the `VisualizationDriver` object. Examples are found [here](section-orbitals).
+## One-particle densities
 
-Exercises
-----------
+The values of orbitals and one-particle densities at points in space are readily obtained with use of the `VisualizationDriver` object. Examples are found [here](https://kthpanor.github.io/echem/docs/elec_struct/reduced_density.html).
+
+## Exercises
 
 1. For neon, determine the Hartree--Fock energy, $E_\mathrm{HF}$, with use of the basis sets listed in the table above. Assess and rank the quality of the basis sets based on your results.
 
