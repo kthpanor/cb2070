@@ -815,7 +815,7 @@ n(\mathbf{r}, \mathbf{r}') =
 \langle \Psi | \hat{n}(\mathbf{r}, \mathbf{r}') | \Psi \rangle
 \end{equation*}
 %
-is in agreement with the definition of the one-electron density based on a probabilistic interpretation of the wave function.
+is in agreement with the definition of the two-electron density based on a probabilistic interpretation of the wave function.
 
 ---------------------------------------------------------------------------
 

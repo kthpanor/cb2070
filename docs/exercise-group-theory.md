@@ -96,7 +96,7 @@ Exercises
 
 2. Inspect the MO coefficients and determine which irreducible representations the MOs span. To your help, you have the character table.
 
-3. With help of results obtained in the associated problem in the problem set, perform a unitary change of basis produce symmetry-adapted atomic orbitals (SAOs) according to $| \boldsymbol{\chi}' \rangle = | \boldsymbol{\chi} \rangle  \, \mathbf{U}$. This transformation should accomplish an ordering of the SAOs according to their symmetry and adhering to the order of irreps in the character table.
+3. With help of results obtained in the associated problem in the problem set, perform a unitary change of basis to produce symmetry-adapted atomic orbitals (SAOs) according to $| \boldsymbol{\chi}' \rangle = | \boldsymbol{\chi} \rangle  \, \mathbf{U}$. This transformation should accomplish an ordering of the SAOs according to their symmetry and adhering to the order of irreps in the character table.
 
 4. Determine the overlap matrix in the new basis, i.e., $\mathbf{S}' = \langle \boldsymbol{\chi}' | \boldsymbol{\chi}' \rangle$. Comment on the matrix structure.
 
