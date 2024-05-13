@@ -42,7 +42,7 @@ Exercises
 
 3. Shift to use of the 6-311G basis set. Determine the restricted HF energy of H$_2$ for 20 equidistant internuclear distances between 0.7 to 10.0 Bohr. Plot these data points. Interpolate your data points with cubic splines using the SciPy routine `interpolate.interp1d` to add a smooth curve connecting your data points. The unit of energy should be eV and the energy minimum should define the zero level. You have thereby created a PEC illustration.
 
-4. Locate the energy minimum and add more data points in this regions as to get a more accurate estimate of the energy minimum and thereby the equilibrium bond distance. Determine $R_e$ and compare with the experimental value. Explain the difference and why it is prototypical for the HF method.
+4. Locate the energy minimum and add more data points in this region as to get a more accurate estimate of the energy minimum and thereby the equilibrium bond distance. Determine $R_e$ and compare with the experimental value. Explain the difference and why it is prototypical for the HF method.
 
 5. From your result at long internuclear separation distances, estimate the bond energy. Compare with experimental data. If your result is far off from experiment, explain why.
 
