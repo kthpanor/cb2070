@@ -1,4 +1,4 @@
-(exercise-3)=
+(lab-3)=
 Dissociation of covalent bonds
 ==============================
 

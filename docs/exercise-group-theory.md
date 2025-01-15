@@ -1,4 +1,4 @@
-(exercise-4)=
+(lab-4)=
 Group theory and spatial symmetries of wave functions
 =====================================================
 

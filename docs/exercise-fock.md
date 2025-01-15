@@ -1,4 +1,4 @@
-(exercise-2)=
+(lab-2)=
 # Fock matrices and SCF procedure
 
 ## Density matrix

@@ -2,13 +2,13 @@ format: jb-article
 root: docs/intro
 sections:
 - file: docs/installation
-- file: docs/exercises
+- file: docs/laborations
   sections:
   - file: docs/exercise-orbitals
   - file: docs/exercise-fock
   - file: docs/exercise-dissociate
   - file: docs/exercise-group-theory
   - file: docs/exercise-correlation
-- file: docs/problems
+- file: docs/exercises
 - file: docs/references
 - file: docs/appendix
