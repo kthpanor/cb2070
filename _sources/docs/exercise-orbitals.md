@@ -1,4 +1,4 @@
-(exercise-1)=
+(lab-1)=
 # Orbitals and one-particle densities
 
 ## Basis sets
