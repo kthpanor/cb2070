@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Two-particle densities and electron correlation &#8212; Molecular Quantum Mechanics (CB2070)</title>
+    <title>One- and two-particle densities &#8212; Molecular Quantum Mechanics (CB2070)</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Exercises" href="exercises.html" />
-    <link rel="prev" title="Group theory and spatial symmetries of wave functions" href="exercise-group-theory.html" />
+    <link rel="prev" title="Molecular system" href="exercise-group-theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,11 +183,16 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Software installation</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="laborations.html">Computer labs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="exercise-orbitals.html">Orbitals and one-particle densities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-fock.html">Fock matrices and SCF procedure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-dissociate.html">Dissociation of covalent bonds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-group-theory.html">Group theory and spatial symmetries of wave functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Two-particle densities and electron correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-orbitals.html">1. Orbitals and one-particle densities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-fock.html">2. Fock matrices and SCF procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-dissociate.html">3 - Dissociation of covalent bonds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-group-theory.html">Molecular system</a></li>
+
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">One- and two-particle densities</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="exercises.html">Exercises</a></li>
@@ -378,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Two-particle densities and electron correlation</h1>
+    <h1>One- and two-particle densities</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,9 +393,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-and-two-particle-densities">One- and two-particle densities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">One- and two-particle densities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -401,12 +407,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="two-particle-densities-and-electron-correlation">
-<span id="lab-5"></span><h1>Two-particle densities and electron correlation<a class="headerlink" href="#two-particle-densities-and-electron-correlation" title="Link to this heading">#</a></h1>
-<p>The Hartree–Fock method results in total electronic energies that are typically within 1 % of the exact values and several other molecular properties are quite well described as well at this level of theory. Nevertheless, tremendous efforts have been made to develop and implement computationally feasible methods that improve upon the HF description of the system. As to understand why this is motivated, there is nothing more revealing of the shortcomings of the HF wave function than a study of the reduced two-particle density.</p>
+  <ol class="arabic simple" id="lab-5" start="5">
+<li><p>Two-particle densities and electron correlation
+===============================================
+The Hartree–Fock method results in total electronic energies that are typically within 1 % of the exact values and several other molecular properties are quite well described as well at this level of theory. Nevertheless, tremendous efforts have been made to develop and implement computationally feasible methods that improve upon the HF description of the system. As to understand why this is motivated, there is nothing more revealing of the shortcomings of the HF wave function than a study of the reduced two-particle density.</p></li>
+</ol>
 <p>In this exercise, we will study <span class="math notranslate nohighlight">\(n(\mathbf{r}, \mathbf{r}')\)</span> for the hydrogen molecule in the electronic ground state. We will adopt the minimal STO-3G basis set and make use of the HF and CI doubles (CID) levels of theory. In a minimal basis set, CID provides a full-CI description of the system and thus provides the “exact” reference data for the correlation energy and other electronic properties. The CID part of this exercise brings you back to the associated problem in the problem set.</p>
 <section id="one-and-two-particle-densities">
-<h2>One- and two-particle densities<a class="headerlink" href="#one-and-two-particle-densities" title="Link to this heading">#</a></h2>
+<h1>One- and two-particle densities<a class="headerlink" href="#one-and-two-particle-densities" title="Link to this heading">#</a></h1>
 <p>The one-particle density for an <span class="math notranslate nohighlight">\(N\)</span>-electron system is defined as</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -433,7 +441,7 @@ document.write(`
 <p>and it refers to the probability density of finding one electron at position <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and another at position <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> in space regardless of the distribution of others.</p>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
 <li><p>Perform an SCF optimization to obtain <span class="math notranslate nohighlight">\(|\Psi_\mathrm{HF}\rangle\)</span>. Perform a cost–gain analysis of the bond formation in terms of (i) kinetic energy, (ii) electronic–nuclear potential energy, (iii) electron–electron repulsion energy, and (iv) nuclear repulsion energy. Tip: From the virial theorem in physics you know the exact atomic kinetic and potential energies.</p></li>
 <li><p>Use arguments of symmetry to explain why there is no coupling between the singles and doubles block in the CISD Hamiltonian, which is the reason why CID provides a full-CI description in the present case.</p></li>
@@ -441,7 +449,6 @@ document.write(`
 <li><p>With use of the defining expression, determine a computationally tractable expression for the one-particle density for the CID wave function. Plot the densities for the HF and CID wave functions along the internuclear axis. How do the densities compare?</p></li>
 <li><p>With use of the defining expression, determine a computationally tractable expression for the two-particle density for the CID wave function. Plot the densities for the HF and CID wave functions for one electron coordinate fixed to a hydrogen nucleus and the other electron coordinate varying along the internuclear axis. How do the densities compare?</p></li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -480,7 +487,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Group theory and spatial symmetries of wave functions</p>
+        <p class="prev-next-title">Molecular system</p>
       </div>
     </a>
     <a class="right-next"
@@ -508,9 +515,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-and-two-particle-densities">One- and two-particle densities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">One- and two-particle densities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
