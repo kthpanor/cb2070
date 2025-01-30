@@ -1,5 +1,5 @@
 (lab-4)=
-Group theory and spatial symmetries of wave functions
+4. Group theory and spatial symmetries of wave functions
 =====================================================
 
 Molecular system

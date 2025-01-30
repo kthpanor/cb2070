@@ -1,5 +1,5 @@
 (lab-1)=
-# Orbitals and one-particle densities
+# 1. Orbitals and one-particle densities
 
 ## Basis sets
 

@@ -1,5 +1,5 @@
 (lab-2)=
-# Fock matrices and SCF procedure
+# 2. Fock matrices and SCF procedure
 
 ## Density matrix
 
