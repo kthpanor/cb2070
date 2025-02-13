@@ -1,5 +1,4 @@
-Computer labs
-==================
+# Computer labs
 
 The course comprises five computer exercises:
 
@@ -11,6 +10,5 @@ The course comprises five computer exercises:
 
 Exercises are to be solved with use of the VeloxChem software. Template notebooks are provided for all exercises and you are to complete the notebooks as to find the answers to the questions in the exercises.
 
-Examination
--------------
+## Examination
 Completed notebooks serve as reports and are to be handed in for examination on, or before, the due date.
