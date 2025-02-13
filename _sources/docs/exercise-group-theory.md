@@ -1,9 +1,7 @@
 (lab-4)=
-4. Group theory and spatial symmetries of wave functions
-=====================================================
+# 4. Group theory and spatial symmetries of wave functions
 
-Molecular system
-----------------
+## Molecular system
 In this exercise, we will study the ethylene molecule and reveal the spatial symmetries of ground- and excited-state wave functions as well as the molecular orbitals (MOs). The exercise is based on the results derived in the associated problem in the problem set. We will adopt a minimal basis set, STO-3G, and the following molecular structure corresponding to the equilibrium geometry in the electronic ground state:
 
 ```
@@ -18,16 +16,14 @@ C       -0.67759997    0.00000000    0.00000000
 molecule = vlx.Molecule.read_str(mol_str, units='angstrom')
 ```
 
-Ordering of atomic orbitals
----------------------------
+## Ordering of atomic orbitals
 The program internal ordering of atomic orbitals (AOs) is determined by
 
 1. Orbital angular momentum, $l$
 2. Projection of orbital angular momentum, $m_l$
 3. The order of atoms in the user input
 
-Orbital notation
-----------------
+## Orbital notation
 It can be convenient to introduce the following notation
 %
 \begin{equation*}
@@ -62,8 +58,7 @@ and the overlap and Fock matrices in AO basis become
      \mathbf{F} = \langle \boldsymbol{\chi} | \hat{f} | \boldsymbol{\chi} \rangle
 \end{equation*}
 
-Electric dipole moment operator
--------------------------------
+## Electric dipole moment operator
 The electric dipole moment operator takes the form
 
 $$
@@ -89,8 +84,7 @@ np.set_printoptions(precision=2, suppress=True, linewidth=132)
 ```
 ````
 
-Exercises
----------
+## Exercises
 
 1. Perform an SCF optimization to obtain $|\Psi_\mathrm{HF}\rangle$. Print out the MO coefficients and orbital energies. Identify the occupied and unoccupied orbitals.
 

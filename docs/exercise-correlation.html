@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>One- and two-particle densities &#8212; Molecular Quantum Mechanics (CB2070)</title>
+    <title>5. Two-particle densities and electron correlation &#8212; Molecular Quantum Mechanics (CB2070)</title>
   
   
   
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -37,9 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Exercises" href="exercises.html" />
-    <link rel="prev" title="Molecular system" href="exercise-group-theory.html" />
+    <link rel="prev" title="4. Group theory and spatial symmetries of wave functions" href="exercise-group-theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
   
@@ -163,7 +165,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -185,14 +187,9 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="laborations.html">Computer labs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="exercise-orbitals.html">1. Orbitals and one-particle densities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercise-fock.html">2. Fock matrices and SCF procedure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-dissociate.html">3 - Dissociation of covalent bonds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-group-theory.html">Molecular system</a></li>
-
-
-
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">One- and two-particle densities</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="exercise-dissociate.html">3. Dissociation of covalent bonds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-group-theory.html">4. Group theory and spatial symmetries of wave functions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5. Two-particle densities and electron correlation</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="exercises.html">Exercises</a></li>
@@ -354,10 +351,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -365,7 +362,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -383,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>One- and two-particle densities</h1>
+    <h1>5. Two-particle densities and electron correlation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,10 +390,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">One- and two-particle densities</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-and-two-particle-densities">One- and two-particle densities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -407,14 +403,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <ol class="arabic simple" id="lab-5" start="5">
-<li><p>Two-particle densities and electron correlation
-===============================================
-The Hartree–Fock method results in total electronic energies that are typically within 1 % of the exact values and several other molecular properties are quite well described as well at this level of theory. Nevertheless, tremendous efforts have been made to develop and implement computationally feasible methods that improve upon the HF description of the system. As to understand why this is motivated, there is nothing more revealing of the shortcomings of the HF wave function than a study of the reduced two-particle density.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="two-particle-densities-and-electron-correlation">
+<span id="lab-5"></span><h1>5. Two-particle densities and electron correlation<a class="headerlink" href="#two-particle-densities-and-electron-correlation" title="Link to this heading">#</a></h1>
+<p>The Hartree–Fock method results in total electronic energies that are typically within 1 % of the exact values and several other molecular properties are quite well described as well at this level of theory. Nevertheless, tremendous efforts have been made to develop and implement computationally feasible methods that improve upon the HF description of the system. As to understand why this is motivated, there is nothing more revealing of the shortcomings of the HF wave function than a study of the reduced two-particle density.</p>
 <p>In this exercise, we will study <span class="math notranslate nohighlight">\(n(\mathbf{r}, \mathbf{r}')\)</span> for the hydrogen molecule in the electronic ground state. We will adopt the minimal STO-3G basis set and make use of the HF and CI doubles (CID) levels of theory. In a minimal basis set, CID provides a full-CI description of the system and thus provides the “exact” reference data for the correlation energy and other electronic properties. The CID part of this exercise brings you back to the associated problem in the problem set.</p>
 <section id="one-and-two-particle-densities">
-<h1>One- and two-particle densities<a class="headerlink" href="#one-and-two-particle-densities" title="Link to this heading">#</a></h1>
+<h2>One- and two-particle densities<a class="headerlink" href="#one-and-two-particle-densities" title="Link to this heading">#</a></h2>
 <p>The one-particle density for an <span class="math notranslate nohighlight">\(N\)</span>-electron system is defined as</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -441,7 +435,7 @@ The Hartree–Fock method results in total electronic energies that are typicall
 <p>and it refers to the probability density of finding one electron at position <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and another at position <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> in space regardless of the distribution of others.</p>
 </section>
 <section id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Perform an SCF optimization to obtain <span class="math notranslate nohighlight">\(|\Psi_\mathrm{HF}\rangle\)</span>. Perform a cost–gain analysis of the bond formation in terms of (i) kinetic energy, (ii) electronic–nuclear potential energy, (iii) electron–electron repulsion energy, and (iv) nuclear repulsion energy. Tip: From the virial theorem in physics you know the exact atomic kinetic and potential energies.</p></li>
 <li><p>Use arguments of symmetry to explain why there is no coupling between the singles and doubles block in the CISD Hamiltonian, which is the reason why CID provides a full-CI description in the present case.</p></li>
@@ -449,6 +443,7 @@ The Hartree–Fock method results in total electronic energies that are typicall
 <li><p>With use of the defining expression, determine a computationally tractable expression for the one-particle density for the CID wave function. Plot the densities for the HF and CID wave functions along the internuclear axis. How do the densities compare?</p></li>
 <li><p>With use of the defining expression, determine a computationally tractable expression for the two-particle density for the CID wave function. Plot the densities for the HF and CID wave functions for one electron coordinate fixed to a hydrogen nucleus and the other electron coordinate varying along the internuclear axis. How do the densities compare?</p></li>
 </ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -487,7 +482,7 @@ The Hartree–Fock method results in total electronic energies that are typicall
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Molecular system</p>
+        <p class="prev-next-title">4. Group theory and spatial symmetries of wave functions</p>
       </div>
     </a>
     <a class="right-next"
@@ -515,10 +510,9 @@ The Hartree–Fock method results in total electronic energies that are typicall
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">One- and two-particle densities</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-and-two-particle-densities">One- and two-particle densities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
@@ -566,8 +560,8 @@ By Patrick Norman
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
