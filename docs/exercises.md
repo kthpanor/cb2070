@@ -784,7 +784,7 @@ E_\mathrm{MP2} = - \sum_{i,j,s,t}
 }
 $$
 
-where summations run over occupied (indices $i$ and $j$) and unoccupied (indices $s$ and $t$) spatial MOs. Use this formula to determine the MP2 energy and compare to your result from Problem 1 od Session 12.
+where summations run over occupied (indices $i$ and $j$) and unoccupied (indices $s$ and $t$) spatial MOs. Use this formula to determine the MP2 energy and compare to your result from Problem 1 of Session 12.
 
 ---------------------------------------------------------------------------
 
