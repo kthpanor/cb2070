@@ -1,5 +1,7 @@
 (lab-2)=
-# 2. Fock matrices and SCF procedure
+# 2. Fock matrices and the SCF procedure
+
+{download}`Template lab 2 <../template_lab_2.ipynb>`
 
 ## Density matrix
 

@@ -391,25 +391,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="software-installation">
 <h1>Software installation<a class="headerlink" href="#software-installation" title="Link to this heading">#</a></h1>
 <p>Conda is an open-source package and environment management system that runs on Windows, MacOS, and Linux. The conda repository contains a large number of open-source certified packages enabling scientific work. It is recommended that you install the minimal installer for conda named miniconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.</p>
-<p>Retrieve and install miniconda from the following website</p>
+<p>Retrieve and install <strong>miniconda</strong> (scroll down to <em>Miniconda installers</em> section) from the following website</p>
 <blockquote>
-<div><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<div><p><a class="reference external" href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a></p>
 </div></blockquote>
 <p>Start a terminal on a macOS/Linux system or Anaconda Powershell on a Windows system. Conda supports multiple <em>environments</em> and you start in the one named <code class="docutils literal notranslate"><span class="pre">base</span></code> as is typically indicated by the terminal prompt.</p>
-<p>Create a text file named <code class="docutils literal notranslate"><span class="pre">cb2070.yml</span></code> with the following content:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">cb2070</span>
-<span class="n">channels</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
-  <span class="o">-</span> <span class="n">veloxchem</span>
-<span class="n">dependencies</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">matplotlib</span>
-  <span class="o">-</span> <span class="n">jupyterlab</span>
-  <span class="o">-</span> <span class="n">veloxchem</span>
-  <span class="o">-</span> <span class="n">multipsi</span>
-</pre></div>
-</div>
 <p>To create a new and additional environment named <code class="docutils literal notranslate"><span class="pre">cb2070</span></code> and install VeloxChem, Matplotlib, and Jupyter notebook (and package dependencies such as NumPy and SciPy) into it, you enter the following command line statement</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>cb2070.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>cb2070<span class="w"> </span>veloxchem<span class="w"> </span>matplotlib<span class="w"> </span>jupyterlab<span class="w"> </span>-c<span class="w"> </span>veloxchem<span class="w"> </span>-c<span class="w"> </span>conda-forge
 </pre></div>
 </div>
 <p>You can list your conda environments</p>
@@ -425,7 +413,7 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-lab
 </pre></div>
 </div>
-<p>which should open in your default web browser. In Jupyter Lab, start a notebook to allow for interactive execution of Python code written into cells and associated information (text equations, and illustrations) in markdown cells, with examples on how to use it found on, <em>e.g.</em> the <a class="reference external" href="https://kthpanor.github.io/echem/docs/basics_notebook.html">eChem</a> page.</p>
+<p>which should open in your default web browser. In Jupyter Lab, start a notebook to allow for interactive execution of Python code written into cells and associated information (text, equations, illustrations) in markdown cells, with examples on how to use it found on, <em>e.g.</em>, the <a class="reference external" href="https://kthpanor.github.io/echem/docs/basics_notebook.html">eChem</a> page.</p>
 </section>
 
     <script type="text/x-thebe-config">

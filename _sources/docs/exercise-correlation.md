@@ -1,5 +1,7 @@
 (lab-5)=
-# 5. Two-particle densities and electron correlation
+# 5. Electron correlation
+
+{download}`Template lab 5 <../template_lab_5.ipynb>`
 
 The Hartree--Fock method results in total electronic energies that are typically within 1 % of the exact values and several other molecular properties are quite well described as well at this level of theory. Nevertheless, tremendous efforts have been made to develop and implement computationally feasible methods that improve upon the HF description of the system. As to understand why this is motivated, there is nothing more revealing of the shortcomings of the HF wave function than a study of the reduced two-particle density. 
 
