@@ -187,7 +187,7 @@
 <li class="toctree-l2"><a class="reference internal" href="exercise-fock.html">2. Fock matrices and the SCF procedure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercise-dissociate.html">3. Dissociation of covalent bonds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercise-group-theory.html">4. Group theory and spatial symmetries of wave functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercise-correlation.html">5. Two-particle densities and electron correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-correlation.html">5. Electron correlation</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="exercises.html">Exercises</a></li>
@@ -458,10 +458,10 @@ document.write(`
 <ol class="arabic simple">
 <li><p>For neon, determine the Hartree–Fock energy, <span class="math notranslate nohighlight">\(E_\mathrm{HF}\)</span>, with use of the basis sets listed in the table above. Assess and rank the quality of the basis sets based on your results.</p></li>
 <li><p>Continue with basis set cc-pVDZ:  Plot the values of the valence orbitals along a radial line. Does your result depend on the line direction?</p></li>
-<li><p>Discuss nodal points and orthogonality in between all occupied orbitals. Compare with the hydrogen orbitals.</p></li>
+<li><p>Discuss nodal points and orthogonality in between all occupied orbitals.</p></li>
 <li><p>Plot the radial orbital densities for the valence sub-shells <span class="math notranslate nohighlight">\(2s\)</span> and <span class="math notranslate nohighlight">\(2p\)</span>. Does your result depend on the line direction?</p></li>
 <li><p>Plot the total radial density, <span class="math notranslate nohighlight">\(n(r)\)</span>. Identify the atomic <em>K</em>- and <em>L</em>-shells in your plot. Mark the van der Waals radius of 154 pm in your plot and comment on how reasonable this value is as an estimate of the atomic size.</p></li>
-<li><p>With use of SciPy routine <code class="docutils literal notranslate"><span class="pre">integrate.simps</span></code>, integrate <span class="math notranslate nohighlight">\(n(r)\)</span>. Compare your result to the number of electrons in the system.</p></li>
+<li><p>With use of SciPy routine <code class="docutils literal notranslate"><span class="pre">integrate.simpson</span></code>, integrate <span class="math notranslate nohighlight">\(n(r)\)</span>. Compare your result to the number of electrons in the system.</p></li>
 <li><p>Based on Koopmans’ theorem, determine the ionization potential. How does your result compare with the experimental value of 21.56 eV. What are the main sources of error in your calculation?</p></li>
 </ol>
 </section>

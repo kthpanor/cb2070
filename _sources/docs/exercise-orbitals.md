@@ -35,12 +35,12 @@ The values of orbitals and one-particle densities at points in space are readily
 
 2. Continue with basis set cc-pVDZ:  Plot the values of the valence orbitals along a radial line. Does your result depend on the line direction? 
 
-3. Discuss nodal points and orthogonality in between all occupied orbitals. Compare with the hydrogen orbitals.
+3. Discuss nodal points and orthogonality in between all occupied orbitals.
 
 4. Plot the radial orbital densities for the valence sub-shells $2s$ and $2p$. Does your result depend on the line direction? 
 
 5. Plot the total radial density, $n(r)$. Identify the atomic *K*- and *L*-shells in your plot. Mark the van der Waals radius of 154 pm in your plot and comment on how reasonable this value is as an estimate of the atomic size.
 
-6. With use of SciPy routine `integrate.simps`, integrate $n(r)$. Compare your result to the number of electrons in the system.
+6. With use of SciPy routine `integrate.simpson`, integrate $n(r)$. Compare your result to the number of electrons in the system.
 
 7. Based on Koopmans' theorem, determine the ionization potential. How does your result compare with the experimental value of 21.56 eV. What are the main sources of error in your calculation?

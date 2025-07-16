@@ -57,7 +57,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'template_lab_1';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solution_lab_1';</script>
     <link rel="icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -262,7 +264,7 @@
       
       
       
-      <li><a href="https://github.com/kthpanor/cb2070/issues/new?title=Issue%20on%20page%20%2Ftemplate_lab_1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/kthpanor/cb2070/issues/new?title=Issue%20on%20page%20%2Fsolution_lab_1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +294,7 @@
       
       
       
-      <li><a href="_sources/template_lab_1.ipynb" target="_blank"
+      <li><a href="_sources/solution_lab_1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -386,7 +388,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-lab-1-orbitals-and-one-particle-densities">Computer lab 1: Orbitals and one-particle densities</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-computer-lab-1-orbitals-and-one-particle-densities">SOLUTION Computer lab 1: Orbitals and one-particle densities</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-set-quality">1. Basis set quality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-values">2. Orbital values</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-discuss-the-directional-dependence-of-the-orbitals">3.a Discuss the directional dependence of the orbitals</a></li>
@@ -425,11 +427,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="molecular-quantum-mechanics-cb2070">
 <h1>Molecular Quantum Mechanics (CB2070)<a class="headerlink" href="#molecular-quantum-mechanics-cb2070" title="Link to this heading">#</a></h1>
-<section id="computer-lab-1-orbitals-and-one-particle-densities">
-<h2>Computer lab 1: Orbitals and one-particle densities<a class="headerlink" href="#computer-lab-1-orbitals-and-one-particle-densities" title="Link to this heading">#</a></h2>
+<section id="solution-computer-lab-1-orbitals-and-one-particle-densities">
+<h2>SOLUTION Computer lab 1: Orbitals and one-particle densities<a class="headerlink" href="#solution-computer-lab-1-orbitals-and-one-particle-densities" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>Name:</p>
-<p>Date:</p>
+<p>Name: J.H. Andersen with stolen content from VT24 and VT25 student submissions</p>
+<p>Date: July 2025</p>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -481,8 +483,9 @@ document.write(`
 
 <span class="n">hf_energies</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">basis_set</span> <span class="ow">in</span> <span class="n">basis_sets</span><span class="p">:</span>
-    <span class="c1"># write your code here</span>
-    <span class="n">scf_results</span> <span class="o">=</span> <span class="o">...</span>
+    
+    <span class="n">basis</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">MolecularBasis</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis_set</span><span class="p">)</span>
+    <span class="n">scf_results</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
     
     <span class="n">hf_energies</span><span class="p">[</span><span class="n">basis_set</span><span class="p">]</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">get_scf_energy</span><span class="p">()</span>
 </pre></div>
@@ -501,6 +504,9 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Discuss the assessment of the basis set quality</p></li>
 </ol>
+<p>The larger and more flexible the basis set is, the better the quality of the wavefunction and, thus, the lower the energy.
+Since the the minimization is based on the variational principle the approximated energy will always be greater than or equal to the actual ground state energy. Therefore the lower the approximated energy is the better. So in order from best to worst: 6-311g, aug-cc-pvdz, cc-pvdz, 6-31+g, 6-31g, sto-3g.</p>
+<p>The smallest basis set is sto-3g, and this gives the worst results, i.e. the highest energy (E &lt; E_g). Adding one more (6-31G) and two more (6-311G) basis functions per occupied valence orbital improves the results (yeilds lower energies). 6-31+g adds a diffuse function to 6-31g, this improves the result somewhat, but not as much as going to 6-311g. cc-pVDZ is double-zeta like 6-31G, but it has an added polarization function,  which impoove the results compared to 6-31G. aug-cc-pVDZ adds a diffuse term to cc-pVDZ, and thus has both polarization and diffuse functions. This results in even lower energy than cc-pVDZ. Triple-zeta (6-311G) still yeilds the lowest energy out of all basis sets, probably since we have an isolated ground state atom and polarization and diffuse functions are mostly important for bonding and excited state calculations.</p>
 </section>
 <section id="orbital-values">
 <h3>2. Orbital values<a class="headerlink" href="#orbital-values" title="Link to this heading">#</a></h3>
@@ -527,39 +533,57 @@ document.write(`
 <span class="n">mol_orbs</span> <span class="o">=</span> <span class="n">scf_results</span><span class="p">[</span><span class="s2">&quot;C_alpha&quot;</span><span class="p">]</span>
 
 <span class="c1"># number of occupied MOs (in restricted HF)</span>
-<span class="n">nocc</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">nocc</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">number_of_alpha_electrons</span><span class="p">()</span>
 
 <span class="c1"># define the coordinates (in Bohr) for which you wish values of orbitals</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">r</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># use np.linspace to create values between 0 and 4 with n data points</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># use np.linspace to create values between 0 and 4 with n data points</span>
 
 <span class="c1"># define array for coordinates</span>
-<span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">coords_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">coords_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">coords_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
 <span class="c1"># set the values of the z axis to r</span>
-<span class="n">coords</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> 
+<span class="n">coords_x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+<span class="n">coords_y</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+<span class="n">coords_z</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
 
 <span class="c1"># get the indices of the occupied orbitals</span>
-<span class="n">mo_idx</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">mo_number</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">nocc</span><span class="p">)</span>
 
-<span class="c1"># create the mos one by one or setup a loop through mo_number</span>
-<span class="n">mo_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vis_drv</span><span class="o">.</span><span class="n">get_mo</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mol_orbs</span><span class="p">,</span> <span class="n">mo_idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="o">...</span>
+<span class="c1"># mo_1 = np.array(vis_drv.get_mo(coords, molecule, basis, mol_orbs, mo_number[0]))</span>
+<span class="c1"># ...</span>
+<span class="n">mos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nocc</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nocc</span><span class="p">):</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vis_drv</span><span class="o">.</span><span class="n">get_mo</span><span class="p">(</span><span class="n">coords_x</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mol_orbs</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="c1"># the last input integer is the index for the orbital</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vis_drv</span><span class="o">.</span><span class="n">get_mo</span><span class="p">(</span><span class="n">coords_y</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mol_orbs</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="c1"># the last input integer is the index for the orbital</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vis_drv</span><span class="o">.</span><span class="n">get_mo</span><span class="p">(</span><span class="n">coords_z</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mol_orbs</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="c1"># the last input integer is the index for the orbital</span>
+    <span class="c1"># adjust sign</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the MOs along the radius axis</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mf">3.8</span><span class="p">))</span>
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">mo_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$1s$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2s$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2p_0$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2p_{-1}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2p_{+1}$&#39;</span><span class="p">]</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nocc</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">mos</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distance to nucleus along axis </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> (Bohr)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Orbital value (a.u.)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">mo_labels</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Distance to nucleus (Bohr)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Orbital value (a.u.)&#39;</span><span class="p">)</span>
-
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -567,11 +591,12 @@ document.write(`
 </div>
 <section id="a-discuss-the-directional-dependence-of-the-orbitals">
 <h4>3.a Discuss the directional dependence of the orbitals<a class="headerlink" href="#a-discuss-the-directional-dependence-of-the-orbitals" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p>The <em>s</em> orbitals are spherically symmetric and thus do not have spherical dependence. The <em>p</em> orbitals lie along the basis vectors and their values thus depend on the direction of the radial line as is evident from the plots above, where the <em>p</em> orbital value along the directional parameter varies between the x, y, and z components.</p>
 </section>
 <section id="b-discuss-nodal-points-and-orthogonality">
 <h4>3.b Discuss nodal points and orthogonality<a class="headerlink" href="#b-discuss-nodal-points-and-orthogonality" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p><strong>Nodal points</strong> are points where a function has the value zero.</p>
+<p>Each 2<em>p</em>-orbital is anti-symmetric (odd) with a node in origin and thus clearly orthogonal to both s-orbitals, which are symmetric (even). The 2<em>p</em>-orbitals are also mutually orthogonal, since they have values along one principal axis and are zero along the orthogonal principal axes of the other two <em>p</em>-orbitals. 1<em>s</em> an 2<em>s</em> are not clearly orthogonal, but since 2<em>s</em> has one node (which makes it take values &lt;0 for large r) and 1<em>s</em> has no nodes their product will take both positive and negative values for different <em>r</em>, and these will evidently cancel out when integrating.</p>
 </section>
 </section>
 <section id="radial-orbital-densities">
@@ -579,9 +604,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute radial distribution functions for the occupied sub-shells</span>
-<span class="n">rad_den_1s</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">rad_den_2s</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">rad_den_2p</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">rad_den_1s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">rad_den_2s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">rad_den_2p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">rad_den_1s</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">rad_den_2s</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">rad_den_2p</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">mos</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">mos</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">mos</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -590,13 +620,23 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the radial densities for the 2s and 2p sub-shells</span>
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mf">3.8</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">mo_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$1s$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2s$&#39;</span><span class="p">,</span> <span class="s1">&#39;$2p$&#39;</span><span class="p">]</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Distance to nucleus (Bohr)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Radial densities (a.u.)&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rad_den_2s</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rad_den_2p</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distance to nucleus along axis </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> (Bohr)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Radial density(a.u.)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">mo_labels</span><span class="p">)</span>
 
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -604,7 +644,8 @@ document.write(`
 </div>
 <section id="discuss-the-directional-dependence-of-the-radial-densities">
 <h4>Discuss the directional dependence of the radial densities<a class="headerlink" href="#discuss-the-directional-dependence-of-the-radial-densities" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p>It is observed  that the radial densities of the 2s- and 2p subshells are indifferent to the choice of direction in terms of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>. This is expected, as the 2s-orbital is spherically symmetric, and the total 2p radial density is plotted which should be the same along all coordinate axes.</p>
+<p>The radial distrbutions can be thought of as a measure of the probability of finding a particle at a distance of r away from a given reference particle. With this in mind, we see that the probability of finding an electron at the nucleus is zero, disregarding orbital type. The global maximum of both of the functions indicates the most probable distance from the nucleus to find the electron at in the respective orbitals. It is seen that this is approximately the same for both the 2s and the 2p-orbitals.</p>
 </section>
 </section>
 <section id="total-radial-density">
@@ -612,7 +653,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the total radial density</span>
-<span class="n">rad_den_tot</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">rad_den_tot</span> <span class="o">=</span> <span class="n">rad_den_1s</span> <span class="o">+</span> <span class="n">rad_den_2s</span> <span class="o">+</span> <span class="n">rad_den_2p</span>
 </pre></div>
 </div>
 </div>
@@ -622,14 +663,23 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the total radial density</span>
 <span class="c1"># and mark the vdW radious as a vertical line in the plot</span>
 
-<span class="o">...</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rad_den_tot</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Total&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">2.91</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;2.91 Bohr (1.54 Angstrom)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Distance to nucleus (Bohr)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="discuss-sub-shells-van-der-waals-radius-and-atomic-size">
 <h4>Discuss sub-shells, van der Waals radius, and atomic size<a class="headerlink" href="#discuss-sub-shells-van-der-waals-radius-and-atomic-size" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p>From the plot of the total radial density, we can identify the K-shell as the first peak, and the L-shell as the second, broader peak. The two maxima in the total radial distribution correspond to the most probable distance for a electron to be found at in the K- and L-shells, respectively. It is seen that the density value is close to zero at the 1.54 Angstrom mark. However, the distribution function never attains the exact value of zero for <span class="math notranslate nohighlight">\(r \to \infty\)</span>. With this in mind, the van der Waals radius seems like an appropiate measure for defining the atomic size for Ne concluded from the results obtained with our method and basis set.</p>
 </section>
 </section>
 <section id="calculate-the-number-of-electrons-from-density-integration">
@@ -638,17 +688,17 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">simpson</span> <span class="k">as</span> <span class="n">simps</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons in 2s: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons in 2p: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons in 2s: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="n">rad_den_2s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">r</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons in 2p: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="n">rad_den_2p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">r</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of electrons: </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">simps</span><span class="p">(</span><span class="n">rad_den_tot</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">r</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="discuss-the-results-from-the-integration">
 <h4>Discuss the results from the integration<a class="headerlink" href="#discuss-the-results-from-the-integration" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p>Integrating the total density yields exactly the number of electrons in the system, that is 10. Integrating the subshells yields the number of electron in the respective shells (2 and 6).</p>
 </section>
 </section>
 <section id="koopmans-theorem-and-ionization-potential">
@@ -658,8 +708,9 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the IP (in eV) based on Koopman&#39;s theorem</span>
 <span class="n">au_to_ev</span> <span class="o">=</span> <span class="mf">27.2114</span>
 
-<span class="c1"># get the energy of the HOMO (the MO energies are saved in one of the scf_tensors)</span>
-<span class="n">orb_energy</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1"># get the energy of the HOMO</span>
+<span class="n">orb_energy</span> <span class="o">=</span> <span class="n">scf_drv</span><span class="o">.</span><span class="n">scf_tensors</span><span class="p">[</span><span class="s1">&#39;E_alpha&#39;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">au_to_ev</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IP =</span><span class="si">%6.2f</span><span class="s2"> eV&quot;</span> <span class="o">%</span> <span class="o">-</span><span class="n">orb_energy</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -667,7 +718,8 @@ document.write(`
 </div>
 <section id="discuss-the-ip-in-comparison-to-experiment-and-the-main-sources-of-error">
 <h4>Discuss the IP in comparison to experiment and the main sources of error<a class="headerlink" href="#discuss-the-ip-in-comparison-to-experiment-and-the-main-sources-of-error" title="Link to this heading">#</a></h4>
-<p>Write your thoughts here…</p>
+<p><strong>Koopman’s theorem:</strong> The first ionization energy is equal to the negative of the orbital energy of the HOMO. In this theorem we assume that the orbitals of the ion are identical to the orbitals of the neutral molecule/atom (disregarding relaxation effects).</p>
+<p>The experimental value for the IP of Neon is 21.56 eV. Our calculated result (22.64) overestimates the IP by 1.08 eV. In the Hartree-Fock method, electron-electron repulsion is treated by averaging the interaction between every one electron and the remaining electrons. Koopman’s theorem is based on the frozen orbital approximation, that is the orbitals optimized for the <span class="math notranslate nohighlight">\(N\)</span>-electron system are used for the <span class="math notranslate nohighlight">\(N-1\)</span>-electron system which, together with the level of theory, accounts for the difference in the IP compared to the experimental value.</p>
 </section>
 </section>
 </section>
@@ -722,7 +774,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-lab-1-orbitals-and-one-particle-densities">Computer lab 1: Orbitals and one-particle densities</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-computer-lab-1-orbitals-and-one-particle-densities">SOLUTION Computer lab 1: Orbitals and one-particle densities</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-set-quality">1. Basis set quality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-values">2. Orbital values</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-discuss-the-directional-dependence-of-the-orbitals">3.a Discuss the directional dependence of the orbitals</a></li>
