@@ -1,7 +1,7 @@
 (lab-1)=
 # 1. Orbitals and one-particle densities
 
-{download}`Template lab 1 <../template_lab_1.ipynb>`
+{download}`Template lab 1 <../labs/template_lab_1.ipynb>`
 
 ## Basis sets
 

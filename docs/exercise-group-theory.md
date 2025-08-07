@@ -1,7 +1,7 @@
 (lab-4)=
 # 4. Group theory and spatial symmetries of wave functions
 
-{download}`Template lab 4 <../template_lab_4.ipynb>`
+{download}`Template lab 4 <../labs/template_lab_4.ipynb>`
 
 ## Molecular system
 In this exercise, we will study the ethylene molecule and reveal the spatial symmetries of ground- and excited-state wave functions as well as the molecular orbitals (MOs). The exercise is based on the results derived in the associated problem in the problem set. We will adopt a minimal basis set, STO-3G, and the following molecular structure corresponding to the equilibrium geometry in the electronic ground state:
