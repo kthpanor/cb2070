@@ -4,7 +4,7 @@
 title: Molecular Quantum Mechanics (CB2070)
 author: Patrick Norman
 logo: logo.png
-exclude_patterns       : [ README.md ]
+exclude_patterns       : [ README.md, labs/* ]
 only_build_toc_files   : false
 
 # Force re-execution of notebooks on each build.
