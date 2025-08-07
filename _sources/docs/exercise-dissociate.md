@@ -1,7 +1,7 @@
 (lab-3)=
 # 3. Dissociation of covalent bonds
 
-{download}`Template lab 3 <../template_lab_3.ipynb>`
+{download}`Template lab 3 <../labs/template_lab_3.ipynb>`
 
 In this exercise, we will study the hydrogen molecule with use of the restricted (HF) and unrestricted (UHF) Hartree--Fock methods. The properties of H$_2$ are known with high precision and some experimental data are listed in the table below. Data referring to the potential energy curve (PEC) are derived under the assumption of a Morse potential, so that the rovibrational eigenvalue equation for a diatomic molecule can be solved directly and results in energy levels that are specified by
 
